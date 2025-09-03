@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use - RENIX</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+  <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+  <style>
+    .custom-list {
+      list-style-type: square;
+      padding-left: 50px;
+    }
+    .custom-list li {
+      margin: 0 10px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header navbar -->
+  {% include 'navbar.html' %}
+
+  <div class="container my-5 text-muted">
+    <h1 class="text-center mb-4">Terms of Use</h1>
+
+    <p>
+      These Terms of Use (“Terms of Use”) govern your access to and use of the RENIX Recruitment website,
+      <a href="https://www.renix.co.uk">www.renix.co.uk</a> (“Website”), operated by RENIX Recruitment United Kingdom Limited
+      (“RENIX,” “we,” “us,” or “our”), including the content made available through this Website.
+    </p>
+    <p>
+      By accessing the Website, you (“User”) agree to abide by the Terms of Use in effect at the time of your visit. 
+      We may update these Terms of Use from time to time, and your continued use of the Website will be subject 
+      to the Terms of Use as updated on the Website. Please review these Terms of Use regularly. 
+      If you do not agree to them, you should not use the Website.
+    </p>
+    <p>
+      Certain content available through the Website (“Content”) may be subject to specific conditions (“Special Conditions”), 
+      which you agree to each time you access such Content. In the event of any conflict between these Terms of Use 
+      and any Special Conditions, the Special Conditions shall prevail.
+    </p>
+    <p>
+      The Website does not constitute professional advice, nor does it create a business relationship between you and us. 
+      Access to the Website is permitted on a temporary basis, and we may withdraw or amend the Content at any time without notice. 
+      We are not liable if, for any reason, the Website is unavailable at any time or for any period.
+    </p>
+
+    <ul class="custom-list">
+      <li>
+        <strong>Use of this Website:</strong> By accessing the Website, you agree not to perform any acts that may damage 
+        our image, interests, or rights, or otherwise impair, render useless, overload, or hinder the normal use of the Website by other users.
+      </li>
+      <li>
+        <strong>Content:</strong> We do not guarantee the accuracy, usefulness, completeness, or relevance of the Content, 
+        and we expressly exclude liability for errors or omissions in the Content and the Website, except in cases of fraud, 
+        fraudulent misrepresentation, or death or personal injury caused by our negligence.
+      </li>
+      <li>
+        <strong>No Offer or Solicitation:</strong> The information on the Website does not constitute an offer, solicitation, 
+        or recommendation for the purchase, disposal, or trading of any RENIX securities.
+      </li>
+      <li>
+        <strong>Intellectual Property Rights:</strong> All Content on the Website is owned by us or licensed for our use. 
+        You are prohibited from reproducing, distributing, or otherwise using any part of the Website or the Content except as permitted by these Terms of Use or any relevant Special Conditions.
+      </li>
+      <li>
+        <strong>Links and Linking:</strong> The Website may contain links to third-party websites. 
+        We are not responsible for the content or accuracy of any external websites linked to the Website.
+      </li>
+      <li>
+        <strong>Personal Information:</strong> The collection and use of your personal information are governed by our 
+        <a href="/privacy-policy">Privacy Policy</a>, which is incorporated into these Terms of Use.
+      </li>
+      <li>
+        <strong>No Warranties, Limitation of Liability:</strong> To the extent permitted by law, we provide the Website and the Content 
+        on an “as is” and “as available” basis without any warranties of any kind, expressed or implied.
+      </li>
+      <li>
+        <strong>Governing Law and Jurisdiction:</strong> These Terms of Use and all issues relating to this Website and its Content 
+        are governed by English law and subject to the exclusive jurisdiction of the courts of England and Wales.
+      </li>
+      <li>
+        <strong>Amendments:</strong> We may revise these Terms of Use from time to time. 
+        Any changes will take effect upon posting on the Website.
+      </li>
+    </ul>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+</html>

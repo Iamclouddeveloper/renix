@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RENIX UK </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light px-3">
+  <a class="navbar-brand d-flex flex-column align-items-center" href="/">
+    <img src="{{ url_for('static', filename='images/renix-logo.png') }}" alt="Logo" class="logo-img">
+  </a>
+
+  <!-- Toggle -->
+  <button class="navbar-toggler" id="navbarToggle" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Offcanvas Menu -->
+  <div class="offcanvas-menu" id="offcanvasNav">
+    <ul class="navbar-nav ms-auto px-3">
+      <li class="nav-item {% if request.endpoint == 'home' %}active{% endif %}"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item {% if request.endpoint == 'about_us' %}active{% endif %}"><a class="nav-link" href="/about-us">About Us</a></li>
+      <li class="nav-item dropdown {% if request.endpoint in ['recruitment_services','engineering_services','parking_services','it_services'] %}active{% endif %}">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item {% if request.endpoint == 'recruitment_services' %}active{% endif %}" href="/recruitment-services">Recruitment</a></li>
+          <li><a class="dropdown-item {% if request.endpoint == 'engineering_services' %}active{% endif %}" href="/engineering-services">Engineering</a></li>
+          <li><a class="dropdown-item {% if request.endpoint == 'parking_services' %}active{% endif %}" href="/pay-n-park-parnking-services">Parking</a></li>
+          <li><a class="dropdown-item {% if request.endpoint == 'it_services' %}active{% endif %}" href="/information-technology">IT Services</a></li>
+        </ul>
+      </li>
+<li class="nav-item {% if request.endpoint in [
+    'blogs',
+    'blog_ai_business',
+    'blog_cloud_computing',
+    'blog_cybersecurity',
+    'blog_data_analytics',
+    'blog_blockchain',
+    'blog_devops',
+    'blog_5g',
+    'blog_iot',
+    'blog_soft_skills',
+    'blog_ar_vr',
+    'blog_quantum',
+    'blog_edge_computing'
+] %}active{% endif %}">
+  <a class="nav-link" href="/blogs">Blog</a>
+</li>
+
+      <li class="nav-item {% if request.endpoint == 'contact' %}active{% endif %}"><a class="nav-link" href="/contact">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="offcanvas-backdrop"></div>
+</nav>
+
+
+<script src="{{ url_for('static', filename='bootstrap/bootstrap.bundle.min.js') }}"></script>
+<script>
+  const navbarToggle = document.getElementById('navbarToggle');
+    const offcanvasNav = document.getElementById('offcanvasNav');
+    const backdrop = document.querySelector('.offcanvas-backdrop');
+
+    navbarToggle.addEventListener('click', () => {
+      const isOpen = offcanvasNav.classList.contains('open');
+      offcanvasNav.classList.toggle('open');
+      backdrop.classList.toggle('show');
+      navbarToggle.classList.toggle('open');
+    });
+
+    backdrop.addEventListener('click', () => {
+      offcanvasNav.classList.remove('open');
+      backdrop.classList.remove('show');
+      navbarToggle.classList.remove('open');
+    });
+
+  </script>
+  
+</body>
+</html>

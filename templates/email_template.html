@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENIX (UK) Limited</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .email-container {
+      max-width: 650px;
+      background: #ffffff;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    /* Header */
+    .header {
+      background-color: #0A1432;
+      padding: 20px;
+      text-align: center;
+    }
+    .header img {
+      max-width: 140px;
+      margin-bottom: 8px;
+    }
+    .header h1 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    /* Body */
+    .content {
+      padding: 25px 30px;
+      color: #333333;
+      line-height: 1.6;
+    }
+    .content h2 {
+      font-size: 20px;
+      color: #0A1432;
+      margin-bottom: 12px;
+    }
+    .divider {
+      border-top: 1px solid #e0e0e0;
+      margin: 20px 0;
+    }
+    .message-box {
+      background: #f9fbfd;
+      padding: 15px 20px;
+      border-left: 4px solid #007BFF;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    .message-box p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+    /* Footer */
+    .footer {
+      background-color: #0A1432;
+      color: #ffffff;
+      padding: 18px;
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .footer a {
+      color: #00BFFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="email-container">
+    <!-- Header -->
+    <div class="header">
+      <h1>RENIX</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h2>Hello Team,</h2>
+      <p>You have received a new contact message from:</p>
+
+      <div class="message-box">
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Phone:</strong> {{ phone }}</p>
+        <p><strong>Message:</strong> {{ message }}</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p>Best regards,<br>
+      <strong>{{ name }}</strong></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; 2025 RENIX (UK) Limited. All Rights Reserved.</p>
+      <p> <a href="mailto:info@renix.co.uk">info@renix.co.uk</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

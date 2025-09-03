@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us - RENIX (UK) Limited</title>
+    <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+    <meta name="description" content="RENIX (UK) Limited provides innovative IT, Engineering, and Recruitment solutions. Learn about our leadership, mission, and vision.">
+
+</head>
+<body>
+    <!-- Header navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- About Us Section -->
+  <div class="container py-5">
+   
+    <div class="row align-items-center">
+        <div class="text-center mb-4" data-animate="fade-in-down">
+            <h2 class="mb-4 border-bottom pb-2  text-primary" >Welcome to RENIX</h2>
+        </div>
+      <div class="col-md-6">
+        <h1 class="fw-bold about-header" data-animate="fade-in-left">We Are <span class="about-title">RENIX</span></h1>
+        <p data-animate="fade-in-left">RENIX (UK) Limited is committed to driving innovation through the development of cutting-edge software solutions, serving as both a trusted systems integrator and a provider of transformative technologies.</p>
+        <p data-animate="fade-in-left">At RENIX, we harness technology to redefine how businesses manage licenses and deliver training. With extensive software industry experience, our team delivers solutions that enhance efficiency, ensure compliance, and empower long-term client success.</p>
+        <p data-animate="fade-in-left">At RENIX (UK) Limited, we specialise in delivering innovative IT, Engineering, and Recruitment solutions tailored to the unique needs of businesses worldwide. Our company is led by a team of seasoned professionals, including Mr. Shanmuga Velu, who brings decades of expertise to every project.</p>
+      </div>
+
+       <div class="col-md-6 mb-4 mb-md-0"  data-animate="fade-in-right">
+        <img src="{{ url_for('static', filename='images/about-us-img.png') }}" class="img-fluid about-img customShadow rounded-3" alt="About Us Image">
+      </div>
+    </div>
+  </div>
+
+  <div class="leadership-section py-5 position-relative overflow-hidden">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary" data-animate="fade-in-down">Leadership</h2>
+        <hr style="width: 100px; height: 3px; background-color: #00BFFF; color:#00BFFF; margin: auto;" data-animate="fade-in-up">
+      </div>
+   
+      <div class="row align-items-center px-3">
+
+        <div class="col-md-6 mb-4 mb-md-0"  data-animate="fade-in-right">
+          <img src="{{ url_for('static', filename='images/team_profile1.png') }}" class="img-fluid about-img shadow-lg rounded-3" alt="About Us Image">
+        </div>
+
+        <div class="col-md-6">
+          <h5 class="fw-bold text-success">Mr. Shanmuga Velu</h5>
+          <p class="text-muted">Founder</p>
+          <p data-animate="fade-in-left">Mr. Shanmuga Velu, based in Derby, UK, brings over 20 years of expertise in IT solutions and railway signaling. 
+            He is the visionary behind the <a href="https://www.paynpark.co.uk/" target="_blank" class="text-decoration-none text-success fw-bold">Pay N Park</a> application, widely adopted across the UK, and 
+            the innovative <a href="https://flyerpro.co.uk" target="_blank" class="text-decoration-none text-success fw-bold">FlyerPro</a>, 
+            a next-generation digital platform designed to transform business communication and marketing. 
+            His leadership is defined by a commitment to technological innovation, operational excellence, and 
+            active engagement in community initiatives, reflecting a balance of professional achievement 
+            and social responsibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <!-- Why Choose Us Section -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary border-bottom pb-2 d-inline-block" data-animate="fade-in-down">
+        Why Choose Us?
+      </h2>
+      <p class="text-muted mt-2" data-animate="fade-in-left">
+        Trusted by businesses worldwide for our expertise, innovation, and client-focused approach.
+      </p>
+    </div>
+
+    <div class="row gy-4">
+      <!-- Item 1 -->
+      <div class="col-md-6 d-flex">
+        <div class="me-3 text-primary fs-2" data-animate="fade-in-down">
+          <i class="bi bi-person-check-fill"></i>
+        </div>
+        <div data-animate="fade-in-right">
+          <h5 class="fw-bold">Expert Leadership</h5>
+          <p class="text-muted mb-0">
+            Over 60 years of combined leadership experience guiding business transformation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-6 d-flex">
+        <div class="me-3 text-primary fs-2" data-animate="fade-in-down">
+          <i class="bi bi-tools"></i>
+        </div>
+        <div data-animate="fade-in-right">  
+          <h5 class="fw-bold">End-to-End Solutions</h5>
+          <p class="text-muted mb-0">
+            Comprehensive services spanning IT, engineering, and recruitment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-6 d-flex">
+        <div class="me-3 text-primary fs-2" data-animate="fade-in-down">
+          <i class="bi bi-globe"></i>
+        </div>
+        <div data-animate="fade-in-right">
+          <h5 class="fw-bold">Global Perspective</h5>
+          <p class="text-muted mb-0">
+            Operating in the UK with a strong understanding of global markets.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-6 d-flex">
+        <div class="me-3 text-primary fs-2" data-animate="fade-in-down">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <div data-animate="fade-in-right">
+          <h5 class="fw-bold">Proven Track Record</h5>
+          <p class="text-muted mb-0">
+            Successful innovations like Pay N Park reflect our ability to deliver results.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-6 d-flex">
+        <div class="me-3 text-primary fs-2" data-animate="fade-in-down">
+          <i class="bi bi-people"></i>
+        </div>
+        <div data-animate="fade-in-right">
+          <h5 class="fw-bold">Client-Centric Approach</h5>
+          <p class="text-muted mb-0">
+            Solutions tailored to client needs, ensuring measurable business impact.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-6 d-flex">
+        <div class="me-3 text-primary fs-2" data-animate="fade-in-down">
+          <i class="bi bi-tree"></i>
+        </div>
+        <div data-animate="fade-in-right">
+          <h5 class="fw-bold">Sustainability & Community</h5>
+          <p class="text-muted mb-0">
+            Embedding sustainable practices and contributing positively to communities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-light py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6" data-animate="fade-in-left">
+          <div >
+            <img src="{{ url_for('static', filename='images/mission_vision.jpg') }}" alt="mission_vision" class="img-fluid rounded customShadow" >
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!-- Mission -->
+          <div class="d-flex align-items-start">
+            <div class="me-3 text-primary fs-1" data-animate="fade-in-down">
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <div data-animate="fade-in-up">
+              <h4 class="fw-bold text-dark">Our Mission</h4>
+              <p class="text-muted mb-0">
+                To be a global leader in delivering transformative technology and engineering solutions while fostering long-lasting partnerships and creating meaningful opportunities for individuals and businesses worldwide.
+              </p>
+            </div>
+          </div>
+          <!-- Vision -->
+          <div class="d-flex align-items-start">
+            <div class="me-3 text-primary fs-1" data-animate="fade-in-down">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <div data-animate="fade-in-up">
+              <h4 class="fw-bold text-dark">Our Vision</h4>
+              <p class="text-muted mb-0">
+                To be a global leader in delivering transformative technology and 
+                engineering solutions while fostering long-lasting partnerships 
+                and creating meaningful opportunities for individuals and 
+                businesses worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+
+   {% include 'footer.html' %}
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

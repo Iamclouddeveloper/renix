@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge Computing: Bringing Data Closer - Blog</title>
+  <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+</head>
+<body>
+  <!-- Header navbar -->
+  {% include 'navbar.html' %}
+
+  <div class="container my-5">
+    <h1 class="mb-4 border-bottom pb-2 text-primary">
+      Edge Computing: Bringing Data Closer
+    </h1>
+    <p class="text-muted mb-4">
+      Why edge computing is becoming critical for real-time decision-making.
+    </p>
+
+    <!-- Introduction -->
+    <h3 class="mb-3">Introduction</h3>
+    <p class="text-muted">
+      In today’s digital economy, where timely insights can define competitive advantage, 
+      <strong>edge computing</strong> is emerging as a transformative solution. Rather than relying solely 
+      on centralised cloud servers, edge computing processes data closer to the source—whether through 
+      sensors, IoT devices, or local networks. This approach significantly reduces latency, enhances 
+      efficiency, and enables faster decision-making.
+    </p>
+
+    <!-- Why Edge Computing Matters -->
+    <h3 class="mb-3">Why Edge Computing Matters</h3>
+    <p class="text-muted">
+      Traditional cloud computing often struggles with latency and bandwidth limitations, 
+      particularly as billions of connected devices generate vast amounts of data. 
+      Edge computing addresses these challenges by processing information locally and 
+      transmitting only the most essential data to the cloud. This capability allows organisations 
+      to act instantly, which is especially valuable in industries where milliseconds can determine outcomes.
+    </p>
+
+    <!-- Key Applications -->
+    <h3 class="mb-3">Key Applications of Edge Computing</h3>
+    <ul class="text-muted">
+      <li><strong>Healthcare:</strong> Real-time patient monitoring using wearable devices with immediate local data analysis.</li>
+      <li><strong>Autonomous Vehicles:</strong> On-the-spot navigation and safety decisions without reliance on remote servers.</li>
+      <li><strong>Manufacturing:</strong> Smart factories using predictive maintenance and quality control powered by edge systems.</li>
+      <li><strong>Retail:</strong> Personalised in-store experiences delivered through AI applications running at the edge.</li>
+    </ul>
+
+    <!-- Challenges -->
+    <h3 class="mb-3">Challenges of Edge Computing</h3>
+    <p class="text-muted">
+      While the benefits are clear, edge computing also presents challenges. 
+      Ensuring security across distributed networks is complex, and seamless integration 
+      with existing cloud infrastructures requires careful planning. Furthermore, scaling 
+      and managing edge deployments demand new technical skills, governance frameworks, 
+      and architectural strategies.
+    </p>
+
+    <!-- Future Outlook -->
+    <h3 class="mb-3">The Future of Edge Computing</h3>
+    <p class="text-muted">
+      As enabling technologies such as 5G, AI, and IoT mature, edge computing will 
+      increasingly become a fundamental part of digital ecosystems. Its adoption will 
+      accelerate the development of:
+    </p>
+    <ul class="text-muted">
+      <li>Smart cities powered by real-time data flows.</li>
+      <li>Advanced robotics capable of autonomous decision-making.</li>
+      <li>Immersive AR/VR experiences with minimal latency.</li>
+    </ul>
+    <p class="text-muted">
+      Collectively, these innovations will deliver capabilities and experiences 
+      that were previously out of reach.
+    </p>
+
+    <!-- Conclusion -->
+    <h3 class="mb-3">Conclusion</h3>
+    <p class="text-muted">
+      Edge computing is not simply an extension of cloud computing—it represents a 
+      fundamental shift in digital architecture. By processing data closer to its source, 
+      it empowers businesses and individuals to make faster, smarter, and more reliable decisions. 
+      In an era where speed and responsiveness drive success, edge computing is becoming 
+      essential to unlocking the next wave of digital transformation.
+    </p>
+  </div>
+
+  {% include 'footer.html' %}
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

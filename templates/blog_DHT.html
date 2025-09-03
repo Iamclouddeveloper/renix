@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derby Hindu Temple (Geeta Bhavan) -Blog</title>
+       <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+</head>
+<body>
+
+    <!-- Header navbar -->
+    {% include 'navbar.html' %}
+
+    <div class="container my-5">
+        <h1 class="mb-4 border-bottom pb-2 text-primary" data-animate="fade-in-down">Derby Hindu Temple (Geeta Bhavan)</h1>
+
+        <!-- Introduction -->
+        <p class="fw-bold mb-4" data-animate="fade-in-up">
+            Welcome to the official website of <strong>Derby Hindu Temple (Geeta Bhavan)</strong>, a sacred place of devotion, community, and cultural heritage in the heart of Derby. The temple serves as a spiritual and cultural sanctuary for devotees from all walks of life, upholding the values and teachings of Sanatana Dharma.
+        </p>
+
+        <!-- Our Temple -->
+        <h2 class="mb-3" data-animate="fade-in-left">About the Temple</h2>
+        <p data-animate="fade-in-left">
+            Established in the early 1980s, the Derby Hindu Temple has grown into a vibrant religious and cultural hub for the Hindu community in Derbyshire and surrounding areas. The temple is home to beautifully adorned deities including Lord Rama, Sita, Lakshmana, Hanuman, Lord Krishna, Radha, and Lord Shiva.
+        </p>
+        <p data-animate="fade-in-left">
+            The temple is a space for prayer, meditation, celebration, and education. It is managed by a dedicated committee and volunteers who ensure the temple's smooth operations, events, and community outreach programs.
+        </p>
+
+        <!-- Regular Activities -->
+        <h3 class="mb-3" data-animate="fade-in-left">Regular Services and Activities</h3>
+        <ul class="list-group mb-4">
+            <li class="list-group-item" data-animate="fade-in-left"><strong>Daily Aarti:</strong> Morning and evening prayers with bhajans and chanting.</li>
+            <li class="list-group-item" data-animate="fade-in-left"><strong>Weekly Satsangs:</strong> Spiritual gatherings with kirtans, discourses, and prasadam.</li>
+            <li class="list-group-item" data-animate="fade-in-left"><strong>Festivals:</strong> Grand celebrations of Diwali, Navratri, Janmashtami, Maha Shivratri, Holi, and more.</li>
+            <li class="list-group-item" data-animate="fade-in-left"><strong>Children’s Classes:</strong> Moral education, Hindu history, language, and bhajan singing sessions.</li>
+            <li class="list-group-item" data-animate="fade-in-left"><strong>Yoga and Meditation:</strong> Periodic wellness sessions promoting inner peace and well-being.</li>
+        </ul>
+
+        <!-- Community Role -->
+        <h3 class="mb-3" data-animate="fade-in-left">Community Outreach</h3>
+        <p data-animate="fade-in-left">
+            The Derby Hindu Temple plays an active role in supporting the wider community through interfaith dialogues, charity drives, senior support programs, and educational workshops. It fosters unity, compassion, and understanding while encouraging the next generation to take pride in their cultural identity.
+        </p>
+
+        <!-- Temple Hall and Facilities -->
+        <h3 class="mb-3" data-animate="fade-in-left">Temple Hall & Facilities</h3>
+        <p data-animate="fade-in-left">
+            The temple includes a main prayer hall, cultural activity rooms, kitchen facilities, and event spaces that can be hired for religious ceremonies, weddings, and cultural functions. We welcome everyone to participate and make use of these sacred facilities.
+        </p>
+
+        <!-- Website Credit -->
+        <h3 class="mb-3" data-animate="fade-in-left">Website Development</h3>
+        <p data-animate="fade-in-left">
+            This website was proudly built and maintained by <strong>RENIX (UK) Limited</strong>, a creative tech partner dedicated to delivering spiritual, cultural, and community-driven web platforms. From design to backend, RENIX (UK) Limited has ensured that Derby Hindu Temple remains connected with its devotees online.
+        </p>
+
+        <!-- Stay Connected -->
+        <h3 class="mb-3" data-animate="fade-in-left">Stay Connected</h3>
+        <p data-animate="fade-in-left">
+            For darshan timings, upcoming events, volunteer opportunities, or donations  please visit our contact page or follow us on social media. Together, let’s preserve our traditions and serve the divine.
+        </p>
+
+        <p class="text-muted">Website developed and maintained by RENIX (UK) Limited</p>
+    </div>
+
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

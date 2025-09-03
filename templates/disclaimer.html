@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Disclaimer - RENIX</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+    <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+    <style>
+        .custom-list {
+            list-style-type: circle;
+            padding-left: 50px;
+        }
+    
+        .custom-list li {
+            margin: 0 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header navbar -->
+    {% include 'navbar.html' %}
+    <div class="container my-5 text-muted">
+        <p class="fw-bold mb-4"><span>Employer/Client Disclaimer</span></p>
+        
+        <p>
+            As a user of the RENIX recruitment website, you acknowledge that the website is accessible to all our customers and contains Candidate Profiles of individuals seeking employment. You strictly agree to treat all candidate data as confidential and to use the RENIX database of Candidate Profiles solely for the purpose of identifying potential employees for specific job vacancies.
+        </p>
+        <p>
+            You agree not to share, copy, or transmit to any third party any candidate data, unless you have clear evidence that the candidate’s consent for such transfer has been obtained. You agree to indemnify and hold harmless RENIX and its associated websites for any and all liability, to the fullest extent permitted by law, that RENIX may incur should you use the RENIX database of Candidate Profiles or other individual data derived from this website for any other purpose than that for which it was provided.
+        </p>
+        <p>
+            You agree to comply with the Terms of Use of this website and accept RENIX right to suspend or cancel your registration at our reasonable discretion, without liability to you, if you breach such terms of use.
+        </p>
+        <p class="fw-bold mb-4"><span>Candidate Disclaimer</span></p>
+        
+        <p>
+            As a candidate, you understand and consent that to facilitate the recruitment process on your behalf, RENIX may forward your details to clients, and may also display promotional excerpts from your details on the RENIX website or other RENIX group websites. You acknowledge and agree that your current employer may have access to the RENIX website or other RENIX group websites, and you unconditionally waive any and all claims you may have against RENIX as a result of any loss you may suffer as a result of the information being displayed on these websites.
+        </p>
+        <p>
+            You agree to comply with the Terms of Use of this website and accept RENIX right to suspend or cancel your registration immediately at our reasonable discretion without liability to you, if you breach such terms of use. You accept that while RENIX will use reasonable efforts to find a suitable position for you, RENIX does not guarantee that any employer or client will request for a candidate’s information, or will interview or hire a candidate.
+        </p>
+        <p>
+            RENIX makes no representation or warranty as to the final terms and duration of any appointment obtained through this website. You waive any claims against RENIX for failure to find you such appointment or in relation to the terms or duration of any appointment.
+        </p>
+    </div>
+    
+    {% include 'footer.html' %}
+</body>
+</html>

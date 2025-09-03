@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> IT Services - RENIX (UK) Limited</title>
+    <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+</head>
+<body>
+  <!-- Header navbar -->
+  {% include 'navbar.html' %}
+
+  <!-- IT Services -->
+  <section class="container py-5">
+    <h1 class="fw-bold text-primary border-bottom pb-2" data-animate="fade-in-down">
+      IT Services
+    </h1>
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-3 mb-md-0 " data-animate="fade-in-left">
+        <img src="{{ url_for('static', filename='images/it-services.jpg') }}" 
+             class="img-fluid rounded customShadow" alt="IT Solutions">
+      </div>
+      <div class="col-md-6 mt-2">
+        <h2 class="mb-3" data-animate="fade-in-down">Information Technology Solutions</h2>
+        <p class="text-muted" data-animate="fade-in-right">
+          At RENIX (UK) Limited, we empower enterprises with cutting-edge IT services designed to fuel innovation, scalability, and long-term success. Our solutions are not just about technology, they are about enabling organisations to embrace digital transformation with confidence and agility.
+        </p>
+        <p class="text-muted" data-animate="fade-in-right">
+          What sets us apart is our customer-centric approach we listen, understand, and craft tailored solutions that align with each client’s unique goals and industry challenges. Whether it’s modernising legacy systems, enhancing cybersecurity frameworks, or building scalable cloud infrastructures, RENIX ensures every solution is built with precision, reliability, and innovation at its core.  
+        </p>
+        <p class="text-muted" data-animate="fade-in-right">
+          Headquartered in the UK, with a global outlook, RENIX (UK) Limited combines international expertise with corporate excellence. Our mission is to be a trusted partner in growth, helping businesses stay ahead in a competitive world by transforming challenges into opportunities through technology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="py-5 bg-light">
+    <div class="container ">
+      <h2 class="fw-bold mb-4 text-center" data-animate="fade-in-down">Who We Are</h2>
+      <p class="text-muted" data-animate="fade-in-left">
+        RENIX (UK) Limited is a trusted global technology partner, committed to delivering innovation-driven solutions that 
+        empower organisations to thrive in a rapidly evolving digital era. We specialise in providing end-to-end Information 
+        Technology services tailored to the unique needs of diverse industries, from small enterprises to large multinational corporations.
+      </p>
+
+      <p class="text-muted " data-animate="fade-in-left">
+        With a focus on scalability, security, and sustainability, RENIX (UK) Limited helps businesses embrace digital transformation, 
+        streamline operations, and unlock new opportunities for growth. Our team of experienced professionals combines deep 
+        technical expertise with industry insights to design solutions that drive measurable value.  
+      </p>
+
+      <p class="text-muted" data-animate="fade-in-left">
+       At RENIX (UK) Limited, we are more than just a service provider 
+       we are a strategic partner committed to innovation, excellence, and sustainable growth.
+      </p>
+    </div>
+  </section>
+
+    <!-- Why Choose Us -->
+<section id="why-choose" class="container-fluid py-5 text-white">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5"  data-animate="fade-in-down">Why Choose RENIX (UK) Limited?</h2>
+
+    <div class="row g-4 text-center">
+
+      <div class="col-md-3 col-6">
+        <img src="{{ url_for('static', filename='images/badge.png') }}" alt="Award Icon" class="mb-2" style="width:60px; height:60px;"  data-animate="fade-in-down">
+        <h1 class="fw-bold" data-count="10"  data-animate="fade-in-up">10+</h1>
+        <p class="small"  data-animate="fade-in-up">Years of IT Expertise</p>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <img src="{{ url_for('static', filename='images/globe.png') }}" alt="globe Icon" class="mb-2" style="width:60px; height:60px;"  data-animate="fade-in-down">
+        <h1 class="fw-bold" data-count="15"  data-animate="fade-in-up">15+</h1>
+        <p class="small"  data-animate="fade-in-up">Successful Global Projects</p>
+      </div>
+
+      <div class="col-md-3 col-6">
+       <img src="{{ url_for('static', filename='images/costumer.png') }}" alt="client Icon" class="mb-2" style="width:60px; height:60px;">
+        <h1 class="fw-bold" data-count="12">12+</h1>
+        <p class="small">Enterprise Clients</p>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <img src="{{ url_for('static', filename='images/customer-care.png') }}" alt="Award Icon" class="mb-2" style="width:60px; height:60px;"  data-animate="fade-in-down">
+        <h1 class="fw-bold" data-count="24" data-animate="fade-in-up">24/7</h1>
+        <p class="small"  data-animate="fade-in-up">Support & Maintenance</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Core Services -->
+  <section class="container py-5">
+    <h2 class="fw-bold text-center mb-4">Our Core Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6" data-animate="fade-in-up">
+        <div class="card h-100 shadow-cm border-0 text-center">
+          <div class="card-body">
+            <img src="{{ url_for('static', filename='images/web-developer.gif') }}" width="80" class="mb-3" alt="">
+            <h5 class="fw-bold text-success">Web & Mobile Development</h5>
+            <p class="text-muted small">
+              High-performance websites and mobile apps built for enterprises, with scalability,  
+              robust security, and user-friendly experiences at the core.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6"  data-animate="fade-in-up">
+        <div class="card h-100 shadow-cm border-0 text-center">
+          <div class="card-body">
+            <img src="{{ url_for('static', filename='images/cloud.gif') }}" width="80" class="mb-3" >
+            <h5 class="fw-bold text-success">Data Management</h5>
+            <p class="text-muted small">
+              Secure, compliant, and scalable solutions for data storage, migration,  
+              integration, and analytics to power better decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6"  data-animate="fade-in-up">
+        <div class="card h-100 shadow-cm border-0 text-center">
+          <div class="card-body">
+            <img src="{{ url_for('static', filename='images/ai.gif') }}" width="80" class="mb-3" alt="">
+            <h5 class="fw-bold text-success">AI & ML Solutions</h5>
+            <p class="text-muted small">
+              AI-driven applications, predictive analytics, and automation  
+              designed to transform workflows and enhance productivity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="blog-section py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center  mb-4" data-animate="fade-in-down">How We Work</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-3 col-6">
+          <div class="p-3">
+            <h6 class="fw-bold" data-animate="fade-in-down">Consultation</h6>
+            <p class="small text-muted" data-animate="fade-in-up">Understanding client needs, goals, and challenges before designing tailored solutions.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="p-3">
+            <h6 class="fw-bold" data-animate="fade-in-down">Design & Development</h6>
+            <p class="small text-muted" data-animate="fade-in-up">Agile-driven development ensuring scalability, security, and user experience.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="p-3">
+            <h6 class="fw-bold" data-animate="fade-in-down">Deployment</h6>
+            <p class="small text-muted" data-animate="fade-in-up">Seamless rollout with minimal disruption to business operations.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="p-3">
+            <h6 class="fw-bold" data-animate="fade-in-down">Support</h6>
+            <p class="small text-muted" data-animate="fade-in-up">24/7 maintenance, monitoring, and upgrades for business continuity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Projects -->
+<section class="container py-5">
+  <h2 class="fw-bold text-center mb-4" data-animate="fade-in-down">Our Projects</h2>
+  <p class="text-muted text-center mb-5" data-animate="fade-in-up">
+    At RENIX (UK) Limited, we take pride in delivering solutions that combine innovation with real-world impact. 
+    Here are some flagship projects that showcase our expertise in building scalable, secure, and user-centric platforms.
+  </p>
+
+  <div class="row g-5 align-items-center mb-5">
+    <!-- Pay N Park -->
+    <div class="col-md-4" data-animate="fade-in-left">
+      <img src="{{ url_for('static', filename='images/paynpark.png') }}" 
+           class="img-fluid rounded shadow-cm" alt="Pay N Park Project">
+    </div>
+    <div class="col-md-8" data-animate="fade-in-right">
+      <h4 class="fw-bold text-success">Pay N Park</h4>
+      <p class="text-muted small">
+        <strong><a href="https://www.paynpark.co.uk/" target="_blank">Pay N Park</a></strong> is a smart parking management 
+        solution developed to simplify parking operations across the UK. The platform offers 
+        real-time booking, digital payments, and seamless integration with IoT devices, enhancing 
+        convenience for users and efficiency for operators.
+      </p>
+      <ul class="text-muted small">
+        <li>Cloud-based parking management</li>
+        <li>Integrated online payments</li>
+        <li>Real-time availability tracking</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <!-- FlyerPro -->
+    <div class="col-md-4 order-md-2" data-animate="fade-in-right">
+      <img src="{{ url_for('static', filename='images/blog10.jpg') }}" 
+           class="img-fluid rounded shadow-cm" alt="FlyerPro Project">
+    </div>
+    <div class="col-md-8 order-md-1" data-animate="fade-in-left">
+      <h4 class="fw-bold text-success">FlyerPro</h4>
+      <p class="text-muted small">
+        <strong><a href="https://www.flyerpro.co.uk/" target="_blank">FlyerPro</a></strong> is an 
+        advanced digital flyer and campaign management platform designed for businesses of all 
+        sizes. It enables organisations to create, distribute, and track marketing campaigns 
+        with powerful analytics and automation features.
+      </p>
+      <ul class="text-muted small">
+        <li>Easy-to-use flyer builder</li>
+        <li>Campaign automation tools</li>
+        <li>Analytics & performance tracking</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+
+  <!-- Technologies -->
+<section class="container py-5">
+  <h2 class="fw-bold text-center mb-4" data-animate="fade-in-down">Technologies We Use</h2>
+  <div class="row g-4 text-center">
+
+    <!-- Frontend -->
+    <div class="col-md-3 col-6" data-animate="fade-in-up">
+      <div class="tech-box p-4 customShadow-lg rounded bg-white h-100">
+        <img src="{{ url_for('static', filename='images/react.png') }}" 
+             alt="React Logo" class="mb-3" width="60">
+        <h6 class="fw-bold">Frontend</h6>
+        <p class="small text-muted">React, Angular, Vue</p>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="col-md-3 col-6" data-animate="fade-in-up">
+      <div class="tech-box p-4 customShadow-lg rounded bg-white h-100">
+        <img src="{{ url_for('static', filename='images/python.png') }}" 
+             alt="Node.js Logo" class="mb-3" width="60">
+        <h6 class="fw-bold">Backend</h6>
+        <p class="small text-muted">Node.js, Django, Flask</p>
+      </div>
+    </div>
+
+    <!-- Cloud -->
+    <div class="col-md-3 col-6" data-animate="fade-in-up">
+      <div class="tech-box p-4 customShadow-lg rounded bg-white h-100">
+        <img src="{{ url_for('static', filename='images/amazonwebservices.png') }}" 
+             alt="AWS Logo" class="mb-3" width="60">
+        <h6 class="fw-bold">Cloud</h6>
+        <p class="small text-muted">AWS, Azure, Google Cloud</p>
+      </div>
+    </div>
+
+    <!-- AI & ML -->
+    <div class="col-md-3 col-6" data-animate="fade-in-up">
+      <div class="tech-box p-4 customShadow-lg rounded bg-white h-100">
+        <img src="{{ url_for('static', filename='images/ai_ml.png') }}" 
+             alt="TensorFlow Logo" class="mb-3" width="60">
+        <h6 class="fw-bold">AI & ML</h6>
+        <p class="small text-muted">TensorFlow, PyTorch, OpenCV</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   {% include 'footer.html' %}
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
