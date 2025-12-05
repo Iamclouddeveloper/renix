@@ -134,27 +134,19 @@ if (contactForm) {
       message.classList.remove('is-invalid');
   }
 
-  // Captcha Validation
+  // Captcha Validation (only check empty, correctness = backend)
     const captchaInput = document.getElementById('captchaInput');
     const captchaError = document.getElementById('captchaError');
     const captchaValue = captchaInput.value.trim();
 
-    // Get expected captcha answer from hidden input (set in backend)
-    const correctAnswer = parseInt(document.getElementById('captchaAnswer').value, 10);
-
     if (captchaValue === '') {
-        captchaError.textContent = "Captcha is required.";
-        captchaError.classList.remove('d-none');
-        captchaInput.classList.add('is-invalid');
-        isValid = false;
-    } else if (parseInt(captchaValue, 10) !== correctAnswer) {
-        captchaError.textContent = "Incorrect captcha. Try again.";
-        captchaError.classList.remove('d-none');
-        captchaInput.classList.add('is-invalid');
-        isValid = false;
+      captchaError.textContent = "Captcha is required.";
+      captchaError.classList.remove('d-none');
+      captchaInput.classList.add('is-invalid');
+      isValid = false;
     } else {
-        captchaError.classList.add('d-none');
-        captchaInput.classList.remove('is-invalid');
+      captchaError.classList.add('d-none');
+      captchaInput.classList.remove('is-invalid');
     }
 
 

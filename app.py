@@ -1,17 +1,16 @@
-from flask import Flask, render_template,send_file,flash,request,jsonify,session,redirect,url_for
+from flask import Flask, render_template,send_file,flash,request,jsonify,session,redirect,url_for,Response
 from flask_mail import Mail, Message
+from PIL import Image, ImageDraw, ImageFont
 import os
-import random
+import io, random
 from dotenv import load_dotenv
-
-
-
 
 app = Flask(__name__)
 
 app.secret_key = os.getenv('SECRET_KEY')
 
 load_dotenv()
+
 
 app.config['MAIL_SERVER'] = 'smtppro.zoho.eu'
 app.config['MAIL_PORT'] = 587
@@ -32,13 +31,15 @@ def home():
 def about_us():
     return render_template('about.html')
 
-@app.route('/recruitment-services')
-def recruitment_services():
-    return render_template('recruitment_services.html')
+@app.route('/business-support-services')
+def business_support_services():
+    return render_template('business_support.html')
 
-@app.route('/engineering-services')
-def engineering_services():
-    return render_template('engineering_services.html')
+
+@app.route('/iot-embedded-systems')
+def iot_embedded_systems():
+    return render_template('iot_embedded.html')
+
 
 @app.route('/pay-n-park-parnking-services')
 def parking_services():
@@ -93,6 +94,11 @@ def blog_harihar():
 @app.route('/blog-flyer-pro')
 def blog_flyer_pro():
     return render_template('blog_flyer_pro.html')
+
+@app.route('/tamannas-restaurant')
+def tamannas_restaurant():
+    return render_template('tamannas_restaurant.html')
+
 
 
 @app.route('/blog-ai-business')
@@ -203,11 +209,52 @@ def contact():
             print("Email sending error:", e)
             flash(f"An error occurred while sending your message: {str(e)}", "danger")
             
-     #  generate new math captcha
+    return render_template('contact.html')
+
+@app.route('/captcha_image')
+def captcha_image():
+    # Generate random numbers
     num1 = random.randint(1, 9)
     num2 = random.randint(1, 9)
+    captcha_text = f"{num1} + {num2} = ?"
+
+    # Store the answer in session
     session['captcha_answer'] = num1 + num2
-    return render_template('contact.html',num1=num1, num2=num2)
+
+    # Create image (black background)
+    img = Image.new('RGB', (180, 60), color='black')
+    draw = ImageDraw.Draw(img)
+
+    # Load font (fall back if missing  (DejaVuSans-Bold.ttf) , arial.ttf)
+    try:
+        font = ImageFont.truetype("DejaVuSans-Bold.ttf", 32)
+    except:
+        font = ImageFont.load_default()
+
+    # Draw captcha text (white)
+    draw.text((20, 10), captcha_text, fill="white", font=font)
+
+    # Add random noise dots
+    for _ in range(200):
+        x = random.randint(0, img.width - 1)
+        y = random.randint(0, img.height - 1)
+        draw.point((x, y), fill="white")
+
+    # Add random noise lines
+    for _ in range(6):
+        x1 = random.randint(0, img.width)
+        y1 = random.randint(0, img.height)
+        x2 = random.randint(0, img.width)
+        y2 = random.randint(0, img.height)
+        draw.line((x1, y1, x2, y2), fill="white", width=1)
+
+    # Save image to memory
+    buf = io.BytesIO()
+    img.save(buf, format='PNG')
+    buf.seek(0)
+
+    return Response(buf, mimetype='image/png')
+
 
 
 if __name__ == '__main__':

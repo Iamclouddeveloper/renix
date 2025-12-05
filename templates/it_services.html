@@ -13,28 +13,30 @@
   {% include 'navbar.html' %}
 
   <!-- IT Services -->
-  <section class="container py-5">
+  <section class=" py-5 " style="background: linear-gradient(135deg, #0d6efd 0%, #6f42c1 100%);">
+    <div class="container">
     <h1 class="fw-bold text-primary border-bottom pb-2" data-animate="fade-in-down">
       IT Services
     </h1>
-    <div class="row align-items-center mb-5">
+    <div class="row  align-items-center mb-5">
       <div class="col-md-6 mb-3 mb-md-0 " data-animate="fade-in-left">
         <img src="{{ url_for('static', filename='images/it-services.jpg') }}" 
              class="img-fluid rounded customShadow" alt="IT Solutions">
       </div>
       <div class="col-md-6 mt-2">
-        <h2 class="mb-3" data-animate="fade-in-down">Information Technology Solutions</h2>
-        <p class="text-muted" data-animate="fade-in-right">
+        <h2 class="mb-3 text-white" data-animate="fade-in-down">Information Technology Solutions</h2>
+        <p class="text-white" data-animate="fade-in-right">
           At RENIX (UK) Limited, we empower enterprises with cutting-edge IT services designed to fuel innovation, scalability, and long-term success. Our solutions are not just about technology, they are about enabling organisations to embrace digital transformation with confidence and agility.
         </p>
-        <p class="text-muted" data-animate="fade-in-right">
+        <p class="text-white" data-animate="fade-in-right">
           What sets us apart is our customer-centric approach we listen, understand, and craft tailored solutions that align with each client’s unique goals and industry challenges. Whether it’s modernising legacy systems, enhancing cybersecurity frameworks, or building scalable cloud infrastructures, RENIX ensures every solution is built with precision, reliability, and innovation at its core.  
         </p>
-        <p class="text-muted" data-animate="fade-in-right">
+        <p class="text-white" data-animate="fade-in-right">
           Headquartered in the UK, with a global outlook, RENIX (UK) Limited combines international expertise with corporate excellence. Our mission is to be a trusted partner in growth, helping businesses stay ahead in a competitive world by transforming challenges into opportunities through technology.
         </p>
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Who We Are -->
@@ -103,7 +105,7 @@
         <div class="card h-100 shadow-cm border-0 text-center">
           <div class="card-body">
             <img src="{{ url_for('static', filename='images/web-developer.gif') }}" width="80" class="mb-3" alt="">
-            <h5 class="fw-bold text-success">Web & Mobile Development</h5>
+            <h5 class="fw-bold ">Web & Mobile Development</h5>
             <p class="text-muted small">
               High-performance websites and mobile apps built for enterprises, with scalability,  
               robust security, and user-friendly experiences at the core.
@@ -115,7 +117,7 @@
         <div class="card h-100 shadow-cm border-0 text-center">
           <div class="card-body">
             <img src="{{ url_for('static', filename='images/cloud.gif') }}" width="80" class="mb-3" >
-            <h5 class="fw-bold text-success">Data Management</h5>
+            <h5 class="fw-bold ">Data Management</h5>
             <p class="text-muted small">
               Secure, compliant, and scalable solutions for data storage, migration,  
               integration, and analytics to power better decision-making.
@@ -127,7 +129,7 @@
         <div class="card h-100 shadow-cm border-0 text-center">
           <div class="card-body">
             <img src="{{ url_for('static', filename='images/ai.gif') }}" width="80" class="mb-3" alt="">
-            <h5 class="fw-bold text-success">AI & ML Solutions</h5>
+            <h5 class="fw-bold ">AI & ML Solutions</h5>
             <p class="text-muted small">
               AI-driven applications, predictive analytics, and automation  
               designed to transform workflows and enhance productivity.
@@ -173,13 +175,35 @@
 
   <!-- Our Projects -->
 <section class="container py-5">
-  <h2 class="fw-bold text-center mb-4" data-animate="fade-in-down">Our Projects</h2>
+  <h2 class="fw-bold text-center mb-4" data-animate="fade-in-down">Active Projects</h2>
+
   <p class="text-muted text-center mb-5" data-animate="fade-in-up">
     At RENIX (UK) Limited, we take pride in delivering solutions that combine innovation with real-world impact. 
     Here are some flagship projects that showcase our expertise in building scalable, secure, and user-centric platforms.
   </p>
+    <div class="row g-5 align-items-center">
+    <!-- FlyerPro -->
+    <div class="col-md-4 order-md-2" data-animate="fade-in-right">
+      <img src="{{ url_for('static', filename='images/blog10.jpg') }}" 
+           class="img-fluid rounded shadow-cm" alt="FlyerPro Project">
+    </div>
+    <div class="col-md-8 order-md-1" data-animate="fade-in-left">
+      <h4 class="fw-bold text-success">FlyerPro</h4>
+      <p class="text-muted small">
+        <strong><a href="https://www.flyerpro.co.uk/" target="_blank">FlyerPro</a></strong> is an 
+        advanced digital flyer and campaign management platform designed for businesses of all 
+        sizes. It enables organisations to create, distribute, and track marketing campaigns 
+        with powerful analytics and automation features.
+      </p>
+      <ul class="text-muted small">
+        <li>Easy-to-use flyer builder</li>
+        <li>Campaign automation tools</li>
+        <li>Analytics & performance tracking</li>
+      </ul>
+    </div>
+  </div>
 
-  <div class="row g-5 align-items-center mb-5">
+  <div class="row g-5 mt-2 align-items-center mb-5">
     <!-- Pay N Park -->
     <div class="col-md-4" data-animate="fade-in-left">
       <img src="{{ url_for('static', filename='images/paynpark.png') }}" 
@@ -201,27 +225,7 @@
     </div>
   </div>
 
-  <div class="row g-5 align-items-center">
-    <!-- FlyerPro -->
-    <div class="col-md-4 order-md-2" data-animate="fade-in-right">
-      <img src="{{ url_for('static', filename='images/blog10.jpg') }}" 
-           class="img-fluid rounded shadow-cm" alt="FlyerPro Project">
-    </div>
-    <div class="col-md-8 order-md-1" data-animate="fade-in-left">
-      <h4 class="fw-bold text-success">FlyerPro</h4>
-      <p class="text-muted small">
-        <strong><a href="https://www.flyerpro.co.uk/" target="_blank">FlyerPro</a></strong> is an 
-        advanced digital flyer and campaign management platform designed for businesses of all 
-        sizes. It enables organisations to create, distribute, and track marketing campaigns 
-        with powerful analytics and automation features.
-      </p>
-      <ul class="text-muted small">
-        <li>Easy-to-use flyer builder</li>
-        <li>Campaign automation tools</li>
-        <li>Analytics & performance tracking</li>
-      </ul>
-    </div>
-  </div>
+
 
 </section>
 

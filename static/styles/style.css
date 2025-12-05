@@ -281,6 +281,11 @@ body {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
     }
+
+    .btn-darkblue {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Optional: animate.css integration */
@@ -386,6 +391,20 @@ body {
 
 .bg-muted{
   background-color:#e9ecef ;
+}
+
+
+.btn-darkblue{
+  border: none;
+  padding: 6px 20px;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background-color: #0A1432;
+  color: white;
+}
+.btn-darkblue:hover{
+  background-color: #00bfff;
 }
 
 
@@ -754,7 +773,7 @@ input:focus,
 
 .standards-section {
   position: relative;   /* keeps shapes inside */
-  overflow: hidden;     /* optional: cuts shapes that bleed out */
+  overflow: hidden;     
   padding: 80px 20px;
   background: #f8f9fa; /* light background */
 }
@@ -951,4 +970,46 @@ footer a:hover {
   z-index: -1; /* stays behind content */
 }
 
+
+
+
+.btn-gradient {
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+
+    background: linear-gradient(
+        50deg,
+        #0A1432,  /* Deep corporate blue */
+        #151f3bea, /* Ice white */
+        #ff8c42, /* Soft orange */
+        #ff6f00  /* Corporate deep orange */
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 6s ease infinite;
+    box-shadow: 0 4px 10px rgba(10, 20, 50, 0.4);
+    transition: transform 0.25s ease;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(10, 20, 50, 0.5);
+}
+
+
+/* Animated Hexagon Grid */
+.digital-section {
+    position: relative;
+    background: #0d6efd33;
+    overflow: hidden;
+}
 

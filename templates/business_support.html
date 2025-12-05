@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Support Services - RENIX (UK) Limited</title>
+    <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<!-- Hero Section -->
+<section class="container py-5">
+  <h1 class="fw-bold text-primary border-bottom pb-2" data-animate="fade-in-down">
+    Business Support Services
+  </h1>
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6 mb-3 mb-md-0" data-animate="fade-in-left">
+      <img src="{{ url_for('static', filename='images/business-support.jpg') }}" 
+           class="img-fluid rounded customShadow" alt="Business Support Services">
+    </div>
+
+    <div class="col-md-6 mt-2">
+      <h2 class="mb-3" data-animate="fade-in-down">Empowering Businesses with Smart Support Solutions</h2>
+
+      <p class="text-muted" data-animate="fade-in-right">
+        RENIX (UK) Limited provides professional Business Support Services tailored to streamline 
+        operations, reduce administrative overheads, and enhance organisational efficiency.
+      </p>
+
+      <p class="text-muted" data-animate="fade-in-right">
+        Our expert team handles everything from operational management to documentation, 
+        project coordination, communication support, compliance assistance, and digital back-office services.
+      </p>
+
+      <p class="text-muted" data-animate="fade-in-right">
+        With a corporate-grade approach and a focus on reliability, RENIX ensures your business 
+        stays organised, productive, and ready for growth – whether you're a startup or an established enterprise.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Business Support Overview -->
+<section class=" bg-light py-5">
+
+  <div class="container">
+    <h2 class="fw-bold  text-center mb-3 border-bottom pb-2" data-animate="fade-in-down">
+        Enhancing Business Stability & Operational Excellence
+    </h2>
+
+    
+    <p class="text-muted mb-4" data-animate="fade-in-left">
+        At RENIX (UK) Limited, our Business Support Services are engineered to streamline 
+        daily operations, optimise workflow efficiency, and strengthen organisational performance. 
+        With a structured and professional approach, we help businesses maintain consistency, 
+        reduce administrative challenges, and achieve long-term operational clarity.
+    </p>
+
+    
+    <p class="text-muted mb-3" data-animate="fade-in-left">
+        <i class="bi bi-check-circle-fill text-warning me-2"></i>
+        Our team ensures that essential back-office functions are handled with precision 
+        from record management and documentation to daily coordination tasks, empowering your 
+        organisation to stay focused on its core objectives.
+    </p>
+
+    
+    <p class="text-muted mb-3" data-animate="fade-in-left">
+        <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
+        Through efficient communication support, structured workflows, and timely operational 
+        assistance, we help businesses operate with agility, confidence, and improved productivity.
+    </p>
+
+    
+    <p class="text-muted" data-animate="fade-in-left">
+        <i class="bi bi-briefcase-fill text-warning me-2"></i>
+        With a strong focus on professionalism and corporate reliability, RENIX remains a trusted 
+        partner for organisations seeking dependable support solutions tailored to their unique 
+        operational and compliance requirements.
+    </p>
+  </div>
+</section>
+
+
+<!-- Core Services -->
+<section class="container py-5">
+  <h2 class="fw-bold text-center mb-4">Our Core Business Support Services</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4 col-sm-6" data-animate="fade-in-up">
+      <div class="card h-100 customShadow-lg border-0 text-center">
+        <div class="card-body">
+          <img src="{{ url_for('static', filename='images/administrator.png') }}" width="80" class="mb-3">
+          <h5 class="fw-bold">Administrative Support</h5>
+          <p class="text-muted small">
+            Professional back-office management, document preparation, scheduling, and reporting.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6" data-animate="fade-in-up">
+      <div class="card h-100 customShadow-lg border-0 text-center">
+        <div class="card-body">
+          <img src="{{ url_for('static', filename='images/investment.png') }}" width="80" class="mb-3">
+          <h5 class="fw-bold ">Operations & Coordination</h5>
+          <p class="text-muted small">
+            Seamless coordination for project tasks, meetings, client communication, and workflow tracking.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6" data-animate="fade-in-up">
+      <div class="card h-100 customShadow-lg border-0 text-center">
+        <div class="card-body">
+          <img src="{{ url_for('static', filename='images/process.png') }}" width="80" class="mb-3">
+          <h5 class="fw-bold ">Documentation & Compliance</h5>
+          <p class="text-muted small">
+            Corporate documentation, contracts, compliance records, and business-grade process support.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% include 'footer.html' %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

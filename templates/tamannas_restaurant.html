@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamannas Restaurant</title>
+
+  <link href="{{ url_for('static', filename='images/R-logo.png') }}" rel="icon" />
+  <link href="{{ url_for('static', filename='CSS/style.css') }}" rel="stylesheet" />
+</head>
+<body>
+
+  {% include 'navbar.html' %}
+
+  <div class="container my-5">
+
+    <h1 class="mb-4 border-bottom pb-2 text-primary" data-animate="fade-in-down">
+  Tamannas Restaurant – Digital Transformation in Smart Dining
+</h1>
+
+<p class="fw-bold mb-4" data-animate="fade-in-up">
+  This case study highlights how Tamannas Restaurant modernised its dine-in operations through a
+  fully integrated digital ecosystem designed by RENIX (UK). The objective was to improve order
+  accuracy, enhance customer throughput, and streamline backend workflows using smart restaurant
+  technology.
+</p>
+
+<!-- Website Link -->
+<p class="mb-4" data-animate="fade-in">
+  <strong>Official Website:</strong> 
+  <a href="https://tamannasrestaurant.com" target="_blank">
+    https://tamannasrestaurant.com
+  </a>
+</p>
+
+<h2 class="mb-3" data-animate="fade-in-left">Project Overview</h2>
+<p data-animate="fade-in-left">
+  Tamannas Restaurant required a unified system capable of managing high-volume orders,
+  reducing manual dependencies, and providing real-time visibility across billing, kitchen
+  operations, and customer notifications. RENIX (UK) implemented a tailored digital solution
+  that connected EPOS, kitchen operations, and customer engagement tools into one seamless platform.
+</p>
+
+<h2 class="mb-3" data-animate="fade-in-left">Operational Goals</h2>
+<ul class="list-group mb-4">
+  <li class="list-group-item" data-animate="fade-in-left">Reduce order processing time and manual errors.</li>
+  <li class="list-group-item" data-animate="fade-in-left">Improve communication between service staff and kitchen teams.</li>
+  <li class="list-group-item" data-animate="fade-in-left">Enable real-time customer updates for a transparent dining experience.</li>
+  <li class="list-group-item" data-animate="fade-in-left">Create a scalable system that supports future expansion.</li>
+</ul>
+
+<h2 class="mb-3" data-animate="fade-in-left">Digital Solution Implemented by RENIX (UK)</h2>
+<p data-animate="fade-in-left">
+  The technology foundation of Tamannas was built using a modular architecture, allowing the
+  restaurant to manage complex workflows efficiently while maintaining flexibility for future
+  upgrades.
+</p>
+
+<h3 class="mt-4 mb-3" data-animate="fade-in-left">Key Functional Components</h3>
+
+<ul class="list-group mb-4">
+
+  <li class="list-group-item" data-animate="fade-in-left">
+    <strong>EPOS System:</strong>  
+    A high-performance billing platform enabling order tracking, discount automation, and
+    instantaneous receipt generation.
+  </li>
+
+  <li class="list-group-item" data-animate="fade-in-left">
+    <strong>Real-Time Notification System:</strong>
+    Automated alerts for:
+    <ul class="mt-2">
+      <li>Order Accepted</li>
+      <li>Order in Preparation</li>
+      <li>Order Ready to Serve</li>
+      <li>Payment Updates</li>
+    </ul>
+  </li>
+
+  <li class="list-group-item" data-animate="fade-in-left">
+    <strong>Billing & Invoice Engine:</strong>  
+    Generates accurate invoices with applied discounts, itemised summaries, and table-wise reporting.
+  </li>
+
+  <li class="list-group-item" data-animate="fade-in-left">
+    <strong>Queue & Table Management:</strong>  
+    Structured flow for handling walk-ins, table allocation, waiting lists, and occupancy status.
+  </li>
+
+  <li class="list-group-item" data-animate="fade-in-left">
+    <strong>Kitchen Display System (KDS):</strong>  
+    Live order feed featuring priorities, timestamps, and preparation status, improving kitchen efficiency.
+  </li>
+
+</ul>
+
+<h3 class="mt-5" data-animate="fade-in-left">Outcome & Impact</h3>
+<p data-animate="fade-in-left">
+  The digital transformation led to measurable improvements in turnaround time, order accuracy, and
+  overall customer experience. Staff coordination became more efficient, and management gained
+  real-time operational insights, enabling data-driven decision-making.
+</p>
+
+<p class="text-muted">Digital solution designed and maintained by RENIX (UK) Limited</p>
+  </div>
+
+  {% include 'footer.html' %}
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
