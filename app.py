@@ -24,8 +24,45 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
 mail = Mail(app)
 
 
-@app.route('/')
+@app.route('/',  methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        msg = request.form.get('subject')
+        user_answer = request.form.get('captcha')
+        # Validate captcha
+        correct_answer = session.get('captcha_answer')
+        if not correct_answer or str(user_answer) != str(correct_answer):
+            flash("Captcha failed. Please solve the math question correctly.", "danger")
+           
+            return redirect(url_for('home'))
+
+        recipients = [os.getenv('MAIL_USERNAME')]
+        cc_addresses = [cc.strip() for cc in os.getenv('MAIL_CC', '').split(',') if cc.strip()]
+
+        message = Message(
+            subject="New Contact Message - RENIX UK",
+            recipients=recipients,
+            cc=cc_addresses
+        )
+        message.html = render_template(
+            "email_template.html",
+            name=username,
+            phone=phone,
+            email=email,
+            message=msg
+        )
+
+        try:
+            mail.send(message)
+            flash("Thank you for your message! We will contact you soon.", "success")
+        except Exception as e:
+            print("Email sending error:", e)
+            flash(f"An error occurred while sending your message: {str(e)}", "danger")
+
+        return redirect(url_for('home'))
     return render_template('index.html')
 
 @app.route('/about-us')
@@ -56,13 +93,7 @@ def blogs():
     return render_template('blog.html')
 
 
-@app.route('/auto-connect')
-def blog_auto_connect():
-    return render_template('blog_auto_connect.html')
 
-@app.route('/rasp-version')
-def blog_raspversion():
-    return render_template('blog_raspversion.html')
 
 @app.route('/rail-network-and-operations')
 def blog_rail_network():
@@ -72,25 +103,9 @@ def blog_rail_network():
 def blog_pay_n_park():
     return render_template('blog_pay_n_park.html')
 
-@app.route('/railway-signalling-solution')
-def blog_railway_signalling():
-    return render_template('blog_railway_signalling.html')
-
-@app.route('/parking-management')
-def blog_parking_management():
-    return render_template('blog_parking_management.html')
-
-@app.route('/derby-telugu-association')
-def blog_derby_telugu_association():
-    return render_template('blog_DTA.html')
-
-@app.route('/derby-hindu-temple')
-def blog_derby_hindu_temple():
-    return render_template('blog_DHT.html')
-
-@app.route('/harihar-rajan')
-def blog_harihar():
-    return render_template('blog_harihar.html')
+@app.route('/blog-community')
+def blog_community():
+    return render_template('blog_community.html')
 
 @app.route('/blog-flyer-pro')
 def blog_flyer_pro():
@@ -171,46 +186,6 @@ def privacy_policy():
 
     
 
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-    if request.method == 'POST':
-        username = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
-        msg = request.form['subject']
-        user_answer = request.form.get('captcha')
-        # Validate captcha
-        correct_answer = session.get('captcha_answer')
-        if not correct_answer or str(user_answer) != str(correct_answer):
-            flash("Captcha failed. Please solve the math question correctly.", "danger")
-            return redirect(url_for('contact'))
-
-        recipients = [os.getenv('MAIL_USERNAME')]
-        cc_addresses = [cc.strip() for cc in os.getenv('MAIL_CC', '').split(',') if cc.strip()]
-
-
-        # Create the message
-        message = Message(
-            subject="New Contact Message - RENIX UK",
-            recipients=recipients,
-            cc=cc_addresses
-        )
-        message.html = render_template(
-            "email_template.html",
-            name=username,
-            phone=phone,
-            email=email,
-            message=msg
-        )
-
-        try:
-            mail.send(message)
-            flash("Thank you for your message! We will contact you soon.", "success")
-        except Exception as e:
-            print("Email sending error:", e)
-            flash(f"An error occurred while sending your message: {str(e)}", "danger")
-            
-    return render_template('contact.html')
 
 @app.route('/captcha_image')
 def captcha_image():

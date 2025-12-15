@@ -1,16 +1,12 @@
 <footer class="side-squares-bg text-white pt-5 pb-3 position-relative">
-  <!-- Animated Squares -->
-  <div class="square-group left"></div>
-  <div class="square-group right"></div>
 
   <div class="container">
     <div class="row g-4">
 
       <!-- Company Info -->
       <div class="col-12 col-md-4">
-        <img src="{{ url_for('static', filename='images/renix-logo.png') }}" alt="RENIX Logo" class="mb-3" style="width:150px;">
         <p class="small text-light">
-          RENIX (UK) Limited delivers innovation-driven solutions across IT, engineering, recruitment, and parking services.
+        <span  class="footer-logo-text mb-2">RE<span>NIX</span></span> (UK) Limited,  we turn your ideas into custom digital solutions, from web development. With innovation and precision, we bring your vision to life. Let’s elevate your digital presence with cutting-edge technology.
         </p>
       </div>
 
@@ -18,21 +14,12 @@
       <div class="col-6 col-md-2">
         <h6 class="fw-bold mb-3">Useful Links</h6>
         <ul class="list-unstyled small">
-          <li><a href="/" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="/about-us" class="text-decoration-none text-light">About Us</a></li>
-          <li><a href="/blogs" class="text-decoration-none text-light">Blog</a></li>
-          <li><a href="/contact" class="text-decoration-none text-light">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Services Links -->
-      <div class="col-6 col-md-2">
-        <h6 class="fw-bold mb-3">Services</h6>
-        <ul class="list-unstyled small">
-          <li><a href="/business-support-services" class="text-decoration-none text-light">Business Support</a></li>
-          <li><a href="/iot-embedded-systems" class="text-decoration-none text-light">IOT Systems</a></li>
-          <li><a href="/pay-n-park-parnking-services" class="text-decoration-none text-light">Parking</a></li>
-          <li><a href="/information-technology" class="text-decoration-none text-light">IT Services</a></li>
+          <li><a href="{{ url_for('home') }}#home" data-target="home" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="{{ url_for('home') }}#about" class="text-decoration-none text-light">About</a></li>
+          <li><a href="{{ url_for('home') }}#services" class="text-decoration-none text-light">Services</a></li>
+          <li><a href="{{ url_for('home') }}#projects" class="text-decoration-none text-light">Projects</a></li>
+          <li><a href="/blogs" class="text-decoration-none text-light">Blogs</a></li>
+          <li><a href="{{ url_for('home') }}#affiliations" class="text-decoration-none text-light">Contact</a></li>
         </ul>
       </div>
 
@@ -57,7 +44,7 @@
           <a href="https://www.facebook.com/renixuk/" target="_blank" class="text-light fs-4">
             <i class="bi bi-facebook"></i>
           </a>
-           <a href="mailto:info@renix.co.uk" target="_blank" class="text-light fs-4">
+           <a href="mailto:hello@renix.co.uk" target="_blank" class="text-light fs-4">
             <i class="bi bi-envelope"></i>
           </a>
         </div>

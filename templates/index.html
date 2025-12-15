@@ -23,546 +23,1146 @@
 
 </head>
 <body>
-  <!-- Header navbar -->
-  {% include 'navbar.html' %}
-
-  <div class="hero-section d-flex align-items-center position-relative">
-    <!-- Background Video -->
-    <video autoplay muted loop id="background-video" class="w-100">
-        <source src="{{ url_for('static', filename='videos/home-video.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Gradient Overlay -->
-    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"
-      style="background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));">
-    </div>
-
-    <!-- Hero Content -->
-    <div class="container text-center hero-content position-relative text-white py-5 px-3">
-        <!-- Title -->
-        <h1 class="hero-title mb-3 animate__animated animate__fadeInDown fs-2 fs-md-1">
-            Welcome to <span class="about-title">RENIX (UK) Limited</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="hero-subtitle mb-4 animate__animated animate__fadeInUp fs-5 fs-md-4">
-            Transforming Ideas into Scalable, Future-Ready Software Solutions
-        </p>
-
-        
-        <div class="row justify-content-center mb-4 animate__animated animate__fadeInUp animate__delay-1s text-center">
-            <div class="col-6 col-md-3 mb-3">
-                <i class="bi bi-gear-fill fs-2 mb-2"></i>
-                <p class="fs-6">License Management</p>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <i class="bi bi-book-fill fs-2 mb-2"></i>
-                <p class="fs-6">Training Delivery</p>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <i class="bi bi-shield-lock-fill fs-2 mb-2"></i>
-                <p class="fs-6">Compliance & Security</p>
-            </div>
-        </div>
-
-       
-        <p class="hero-description mb-4 animate__animated animate__fadeInUp animate__delay-2s fs-6 fs-md-5 px-2 px-md-5">
-            With years of industry experience, RENIX (UK) Limited delivers reliable, future-ready software solutions designed to drive growth, efficiency, and success for our clients.
-        </p>
-
-      
-        <a href="/contact" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite animate__delay-3s">
-            Get in Touch
-        </a>
+    
+<header class="mb-5">
+  <div class="brand">
+    <div class="logo"></div>
+    <div>
+      <div class="logo-text">RE<span>NIX</span></div>
+      <div style="font-size:12px;color:var(--muted)">Enterprise Web Solutions</div>
     </div>
   </div>
 
-    <section class="technology-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-4 border-bottom pb-2 d-inline-block text-primary" data-animate="fade-in-down">
-                Innovative Technology Solutions for the Modern Enterprise
-            </h2>
-            <p class=" text-muted mb-5" data-animate="fade-in-down">
-                Step into the future with RENIX (UK) Limited, where technology drives business success. 
-                As a versatile organisation, we deliver comprehensive solutions across multiple sectors. 
-                From cutting-edge software development to strategic IT consulting, we enable businesses to unlock their full potential.
-            </p>
-            <div class="row align-items-center">
-               
-                <div class="col-lg-6 mb-4 mb-lg-0" data-animate="fade-in-down">
-                    <blockquote class="blockquote " data-animate="fade-in-down">
-                        <p class="mb-3">"Technology is the greatest engine of change."</p>
-                    </blockquote>
-                    <p>
-                        In today’s fast-paced landscape, businesses encounter complex challenges daily. Each new obstacle demands innovative thinking and transformative strategies. At RENIX, we cultivate forward-looking perspectives and rigorous analysis, providing advanced services designed to keep your business ahead of the curveadapting seamlessly to both gradual and disruptive change.
-                    </p>
-                </div>
-               
-                <div class="col-lg-6 text-center" data-animate="fade-in-right">
-                    <img src="{{ url_for('static', filename='images/innovative.png') }}" 
-                         alt="Futuristic Technology Eye" 
-                         class="img-fluid rounded customShadow">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Desktop Nav -->
+  <nav id="nav">
+    <a href="#home" data-target="home" class="home">home</a>
+    <a href="#about" data-target="about">About</a>
+    <a href="#services" data-target="services">Services</a>
+    <a href="#projects" data-target="projects">Projects</a>
+    <a href="/blogs" >Blogs</a>
 
-    <section class="services-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5 border-bottom pb-2 text-primary">Our Core Services</h2>
-            <div class="row g-4">
-                <!-- Service 1 -->
-                <div class="col-md-6 col-lg-3" data-animate="fade-in-left">
-                  <div class="card h-100  d-flex flex-column text-center shadow-lg border-0 rounded-3">
-                      <img src="{{ url_for('static', filename='images/business-support.jpg') }}" class="card-img-top rounded-top" alt="Business Support Services">
-                      <div class="card-body d-flex flex-column ">
-                          <h5 class="card-title fw-bold">Business Support Services</h5>
-                          <p class="card-text text-muted">
-                              Offering end-to-end operational support, documentation management, process optimisation, and administrative solutions to help businesses run efficiently.
-                          </p>
-                          <a href="/business-support-services" class="btn btn-gradient mt-auto">Learn More</a>
-                      </div>
-                  </div>
-                </div>
+  </nav>
+
+  <div style="display:flex;gap:12px;align-items:center">
+    <a class="contact-btn" href="#contact" data-target="affiliations">Contact</a>
+    <!-- Mobile Hamburger -->
+    <button class="navbar-toggler" id="navbarToggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Off-canvas Mobile Menu -->
+<div class="offcanvas-menu" id="offcanvasNav">
+  <div class="mobile-logo">
+    
+  </div>
+  <ul>
+    <li><a href="#home" class="dot-link" data-target="home">home</a></li>
+    <li><a href="#about" class="dot-link" data-target="about">About</a></li>
+    <li><a href="#services" class="dot-link" data-target="services">Services</a></li>
+    <li><a href="#projects" class="dot-link" data-target="projects">Projects</a></li>
+    <li><a href="/blogs" class="dot-link">Blogs</a></li>
+    <li><a href="#affiliations" class="dot-link" data-target="affiliations">Contact</a></li>
+  </ul>
+</div>
+<div class="offcanvas-backdrop"></div>
 
 
-                <!-- Service 2 -->
-                <div class="col-md-6 col-lg-3" data-animate="fade-in-left">
-                  <div class="card h-100 d-flex flex-column  text-center shadow-lg border-0 rounded-3">
-                      <img src="{{ url_for('static', filename='images/iot-solutions-img.jpg') }}" class="card-img-top rounded-top" alt="IoT & Embedded Systems Solutions">
-                      <div class="card-body d-flex flex-column ">
-                          <h5 class="card-title fw-bold">IoT & Embedded Systems Solutions</h5>
-                          <p class="card-text text-muted">
-                              Delivering intelligent hardware and automation solutions powered by MQTT, Wi-Fi connectivity, QR-based processing, and embedded technologies.
-                          </p>
-                          <a href="/iot-embedded-systems" class="btn btn-gradient mt-auto">Learn More</a>
-                      </div>
-                  </div>
-                </div>
+<div class="pager" aria-hidden="true">
+  <span class="dot active" data-target="home" title="Home"></span>
+  <span class="dot" data-target="about" title="About"></span>
+  <span class="dot" data-target="services" title="Services"></span>
+  <span class="dot" data-target="projects" title="Projects"></span>
+  <span class="dot" data-target="affiliations" title="Contact"></span>
+</div>
 
-                <!-- Service 3 -->
-                <div class="col-md-6 col-lg-3" data-animate="fade-in-right">
-                    <div class="card h-100  d-flex flex-column  text-center shadow-lg border-0 rounded-3">
-                        <img src="{{ url_for('static', filename='images/parking.jpg') }}" class="card-img-top rounded-top" alt="Smart Parking Solutions">
-                        <div class="card-body d-flex flex-column ">
-                            <h5 class="card-title fw-bold">Smart Parking Solutions</h5>
-                            <p class="card-text text-muted">Providing integrated parking management systems with intelligent technology to streamline operations, enhance efficiency, and improve user experience.</p>
-                            <a href="/pay-n-park-parnking-services" class="btn btn-gradient mt-auto">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="col-md-6 col-lg-3" data-animate="fade-in-right">
-                    <div class="card d-flex flex-column  h-100 text-center shadow-lg border-0 rounded-3">
-                        <img src="{{ url_for('static', filename='images/it-solutions.png') }}" class="card-img-top rounded-top" alt="IT Solutions">
-                        <div class="card-body d-flex flex-column  ">
-                            <h5 class="card-title fw-bold">IT & Software Solutions</h5>
-                            <p class="card-text text-muted">Empowering businesses through tailored IT services including software development, system integration, and data-driven insights for informed decision-making.</p>
-                            <a href="/information-technology" class="btn btn-gradient mt-auto">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section py-5 position-relative overflow-hidden">
-       
-        <div class="about-bg">
-            <div class="shape shape1"></div>
-            <div class="shape shape2"></div>
-            <div class="shape shape3"></div>
-        </div>
-
-        <div class="container position-relative">
-            <div class="row align-items-center">
-              
-                <div class="col-md-6">
-                    <h2 class="mb-3 fw-bold  text-primary" data-animate="fade-in-down">About RENIX</h2>
-                    <div class="quote mb-4" data-animate="fade-in-left">
-                        <p class=" fs-5 fw-semibold">"Innovating Today for a Smarter Tomorrow"</p>
-                    </div>
-                    <p class="text-muted fs-6" data-animate="fade-in-left">
-                        RENIX (UK) Limited tackles complex challenges across engineering, IT, recruitment, parking management, and railway signalling sectors.  
-                        By combining deep industry insight with cutting-edge technology, we drive transformation, efficiency, and sustainable business growth.
-                    </p>
-                    <a href="/about-us" class="btn btn-primary mt-3" data-animate="fade-in-up">Explore Our Services</a>
-                </div>
-
-                
-                <div class="col-md-6 text-center mt-2" data-animate="fade-in-right">
-                    <img src="{{ url_for('static', filename='images/about-img.jpg') }}" alt="About" class="img-fluid rounded shadow-lg floating-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="digital-section py-5 position-relative overflow-hidden">
-      
-
-        <div class="container">
-
-            <div class="text-center mb-4">
-                <h2 class="mb-4 border-bottom pb-2 text-primary fw-bold" data-animate="fade-in-down">
-                    Empowering Digital Transformation for Modern Businesses
-                </h2>
-                <p class="fw-semibold mt-2 fst-italic" data-animate="fade-in-left">
-                    "Innovative IT solutions designed to accelerate growth, efficiency, and business intelligence."
-                </p>
-            </div>
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6">
-                    <p class="text-muted mb-3" data-animate="fade-in-left">
-                        At RENIX (UK) Limited, we help organisations embrace the future through
-                        <strong>end-to-end digital transformation</strong>. Our team delivers modern
-                        IT solutions built around automation, cloud technology, data analytics,
-                        and seamless digital workflows that optimise performance and reduce operational bottlenecks.
-                    </p>
-
-                    <p class="text-muted mb-3" data-animate="fade-in-left">
-                        Whether you are streamlining internal processes, migrating legacy systems,
-                        or adopting enterprise-level software, our strategic approach ensures
-                        <strong>efficiency, scalability, and long-term reliability</strong>.
-                        We help businesses move from outdated systems to powerful, future-ready solutions.
-                    </p>
-
-                    <p class="text-muted" data-animate="fade-in-left">
-                        Our digital services empower companies to make smarter decisions through
-                        <strong>data-driven insights, automation frameworks, and intelligent IT infrastructure</strong>.
-                        RENIX continues to support businesses across the UK and beyond with solutions
-                        that are <strong>robust, secure, and aligned with evolving industry demands</strong>.
-                    </p>
-                </div>
-
-                <div class="col-lg-6 text-center" data-animate="fade-in-right">
-                    <img src="{{ url_for('static', filename='images/digital-transform.jpg') }}"
-                        alt="Digital Transformation"
-                        class="img-fluid rounded customShadow floating-img">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Blog Section -->
-    <section class="blog-section py-5 ">
-      <div class="container">
+<main id="main">
+  <!-- HERO -->
+    <div class="container  py-5">
+      <section id="home" class="hero">
         
-       
-        <div class="text-center mb-5">
-          <h2 class="fw-bold text-primary border-bottom pb-2 d-inline-block" data-animate="fade-in-down">
-            Insights & Case Studies
-          </h2>
-          <p class="text-muted mt-2">
-            Explore our thought leadership, success stories, and innovations shaping industries.
-          </p>
+        <div class="hero-left">
+          <div class="hero-tags">
+            <div class="tag">UK Based</div>
+            <div class="tag">Enterprise-Grade</div>
+            <div class="tag">Full-Stack</div>
+          </div>
+
+          <h1>Building high-performance websites and intelligent web applications.</h1>
+          <p>Renix specialises in custom website development, workflow automation, cloud dashboards and sector-specific web applications for UK organisations.  
+          Based in Derby, we deliver secure, scalable and modern digital products.</p>
+
+          <a href="#affiliations" class="btn-primary">Book a discovery call →</a>
         </div>
 
+        <div class="hero-img">
+          <img src="{{ url_for('static', filename='images/innovative.png') }}">
+        </div>
+      </section>
+    </div>
+
+    <br><br>
+
+    <!-- ABOUT -->
+    <div class="container py-5">
+      <section id="about" class="about-grid">
+
+        <div class="about-card">
+          <h2>About Renix</h2>
+          <p>Renix blends modern design, engineering and automation into highly functional digital platforms.  
+          We help organisations reduce manual workload, streamline processes and modernise customer experiences.
+
+        </p>
+        
+
+          <ul>
+            <li>Derby UK development team</li>
+            <li>Agile project delivery & MVP prototyping</li>
+            <li>Performance and security-first architecture</li>
+            <li>Cloud hosting (AWS / Azure) with monitoring</li>
+            <li>Specialists in Python/Flask, React, SQL</li>
+          </ul>
+          <a href="/about-us" class="btn-primary">Read More</a>
+        </div>
+
+        <div class="testi-grid d-none d-md-block">
+          <div class="testi-box">
+            <strong>“Professional, fast and extremely effective for our CRM MVP.”</strong><br>
+            <span style="color:var(--muted);font-size:14px">— Roofing Business, UK</span>
+          </div>
+
+          <div class="testi-box">
+            <strong>“High-quality engineering and clear communication from start to finish.”</strong><br>
+            <span style="color:var(--muted);font-size:14px">— eCommerce Director</span>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <br><br>
+
+    <!-- SERVICES -->
+    <div class="container">
+      <section id="services" class="py-3">
+        <h2>Our Core Services</h2>
+        <p class="section-desc">Technical craftsmanship tailored to business operations from MVPs to full enterprise platforms.  
+          We design, engineer and optimise digital solutions that streamline workflows, automate routine processes,  
+          and help organisations operate faster, smarter and more efficiently.
+        </p>
+        
+        <div class="services">
+
+          <div class="service-card">
+            <h3>Web Design & UX Engineering</h3>
+            <p>Corporate-grade responsive websites with accessibility, strategy-driven UX and structured content design.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Custom Web Applications</h3>
+            <p>Enterprise dashboards, booking engines, CRMs, workflow automation tools and real-time data systems.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>eCommerce & Client Portals</h3>
+            <p>Advanced catalogue systems, account portals, subscription services and integrated payment flows.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Automation & Integrations</h3>
+            <p>Connect internal systems — accounting, calendars, ERP, logistics, email automation and AI-enhanced workflows.</p>
+          </div>
+
+        </div>
+        <div class="mt-5">
+        <a href="/information-technology" class="btn-primary">Read More</a>
+      </div>
+      </section>
+    </div>
+
+    <section id="projects">
       
-        <div class="row g-4" id="blogGrid">
 
-          <!-- Blog 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog10.jpg') }}" class="card-img-top" alt="FlyerPro">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">FlyerPro: Smarter Leaflet Distribution with Real-Time GPS</h6>
-                <div class="mt-auto">
-                  <a href="/blog-flyer-pro" class="btn btn-gradient w-100">Read More</a>
+      <!-- . CRM -->
+      <div id="crm" style="background:linear-gradient(180deg,#051428, #071a2b)" class="section-block">
+        <div class="container py-5">
+          <div class="wrap">
+
+            <div>
+              <span class="pill">CRM | Customer & Task Suite</span>
+              <h2 class="hero-title fade-in">Smart CRM — Tracking · Invoices · Tasks · Real-Time Maps</h2>
+              <p class="hero-sub fade-in">A unified CRM system with real-time client tracking, invoice automation, task workflow, and route-based map coordination.</p>
+              
+              <div class="project-mobile-summary d-md-none">
+                <img
+                  src="{{ url_for('static', filename='images/crm.jpg') }}"
+                  class="project-mobile-img rounded-3"
+                  alt="project preview"
+                >
+                <div class="project-more-btn mb-3">
+                  <span class="label-more">More details</span>
+                  <span class="label-less">Less details</span>
+                  <span class="chevron"></span>
                 </div>
+              </div>
+
+              <div class="glass-card fade-in">
+                <div class="responsive-flex">
+                  <div style="flex:1">
+                    <div style="font-weight:800">Core Modules</div>
+                    <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+                      <li>Client CRM Dashboard & Contact History</li>
+                      <li>Real-Time Map Tracking for Field Staff</li>
+                      <li>Auto Invoice Generation & PDF Export</li>
+                      <li>Task Assignment & Time Tracking</li>
+                    </ul>
+                  </div>
+
+                  <div style="width:240px">
+                    <img src="{{ url_for('static', filename='images/crm.jpg') }}"
+                      style="width:100%;height:140px;object-fit:cover;border-radius:10px" alt="crm tracking" />
+                  </div>
+                </div>
+
+                <div style="margin-top:12px" class="egrid">
+
+                  <!-- Daily overview card -->
+                  <div class="card-small bg-hover">
+                    <div class="mini">Today’s Activity</div>
+                    <div class="big-number">128</div>
+                    <div style="margin-top:10px" class="mini">Tasks Completed: <strong>54</strong></div>
+                    <div style="margin-top:10px" class="progress"><i style="width:72%"></i></div>
+                  </div>
+
+                  <!-- Live map jobs -->
+                  <div class="card-small bg-hover">
+                    <div class="mini">Live Field Jobs</div>
+                    <div style="font-weight:800;color:#ffd166;font-size:22px">9</div>
+                    <div class="muted" style="margin-top:8px">Real-time route tracking</div>
+                  </div>
+
+                  <!-- Time tracking & invoices -->
+                  <div class="card-small bg-hover" style="grid-column:span 2">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                      <div>
+                        <div class="mini">Time & Attendance</div>
+                        <div style="font-weight:800;font-size:18px">42 hrs logged</div>
+                      </div>
+                      <div style="text-align:right">
+                        <div class="mini">Invoices Generated</div>
+                        <div style="font-weight:800;color:#ff7b7b">18</div>
+                      </div>
+                    </div>
+                    <div style="margin-top:10px" class="muted">Auto-send invoices · Route optimization alerts</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-none d-md-block">
+                <a class="cta" href="#epos" data-target="epos">Explore EPOS</a>
+                
+                <a style="background:transparent;text-decoration:none; border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/blog-flyer-pro">Read More</a>
               </div>
             </div>
-          </div>
-          <!-- Blog 9 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog2.jpg') }}" class="card-img-top" alt="Pay N Park">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Pay N Park: Simplifying Parking for Businesses and Users</h6>
-                <div class="mt-auto">
-                  <a href="/pay-n-park" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Blog 2 - Tamannas Restaurant -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div>
-                <img src="{{ url_for('static', filename='images/tamannas_restaurant.jpg') }}" 
-                    class="card-img-top" 
-                    alt="Tamannas Restaurant">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">
-                  Tamannas Restaurant: Authentic Flavours Served with Tradition
-                </h6>
-                <div class="mt-auto">
-                  <a href="/tamannas-restaurant" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-
-          <!-- Blog 3 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog8.png') }}" class="card-img-top" alt="Derby Hindu Temple">
+            <div>
+              <div class="hero-image fade-in d-none d-md-block">
+                <img src="{{ url_for('static', filename='images/crm-2.png') }}" alt="CRM dashboard" />
               </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Derby Hindu Temple: Building Spiritual and Social Unity</h6>
-                <div class="mt-auto">
-                  <a href="/derby-hindu-temple" class="btn btn-gradient w-100">Read More</a>
+
+              <div style="display:flex;gap:12px;margin-top:12px">
+                <div class="glass-card bg-hover" style="flex:1">
+                  <div class="mini">Main CRM Dashboard</div>
+                  <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+                    <div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(90deg,#ffd166,#ff7b7b);display:flex;align-items:center;justify-content:center;color:#081025;font-weight:900">📍</div>
+                    <div>
+                      <div style="font-weight:800">Real-Time Tracking</div>
+                      <div class="muted" style="font-size:13px">Live map · ETA · Distance logs</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="glass-card bg-hover" style="width:220px">
+                  <div class="mini">Integrations</div>
+                  <div style="margin-top:8px" class="muted">Google Maps · Twilio </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- Blog 4 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog7.png') }}" class="card-img-top" alt="Harihar Rajan">
+              <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-md-none">
+                <a class="cta" href="#epos" data-target="epos">Explore EPOS</a>
+                
+                <a style="background:transparent;text-decoration:none; border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/blog-flyer-pro">Read More</a>
               </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Acharya Harihar Rajan: Inspiring Future Generations</h6>
-                <div class="mt-auto">
-                  <a href="/harihar-rajan" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Blog 5 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog9.jpg') }}" class="card-img-top" alt="Telugu Association">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Derby Telugu Association: Preserving Culture, Celebrating Community</h6>
-                <div class="mt-auto">
-                  <a href="/derby-telugu-association" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog 6 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog5.jpg') }}" class="card-img-top" alt="AutoConnect">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Project AutoConnect: Redefining Vehicle History Verification in the UK</h6>
-                <div class="mt-auto">
-                  <a href="/auto-connect" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog 7 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog6.jpg') }}" class="card-img-top" alt="RaspVision">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Project RaspVision: Transforming Commercial Video Management</h6>
-                <div class="mt-auto">
-                  <a href="/rasp-version" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
             </div>
           </div>
 
-          <!-- Blog 8 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog1.jpg') }}" class="card-img-top" alt="Rail Timetabling">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Optimising Rail Networks: The Strategic Role of Timetabling</h6>
-                <div class="mt-auto">
-                  <a href="/rail-network-and-operations" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <!-- Blog 10 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog3.jpg') }}" class="card-img-top" alt="Railway Signalling">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Railway Signalling: Advanced Solutions for Industrial Clients</h6>
-                <div class="mt-auto">
-                  <a href="/railway-signalling-solution" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog 11 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-lg border-0" data-animate="fade-in-up">
-              <div >
-                <img src="{{ url_for('static', filename='images/blog4.jpg') }}" class="card-img-top" alt="Parking Management">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-semibold">Comprehensive Parking Management for Leading Retail Parks</h6>
-                <div class="mt-auto">
-                  <a href="/parking-management" class="btn btn-gradient w-100">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- Pagination -->
-        <div class="d-flex justify-content-center mt-5">
-          <nav aria-label="Blog pagination">
-            <ul class="pagination pagination-lg" id="pagination"></ul>
-          </nav>
         </div>
       </div>
-    </section>
 
+      <!-- Restaurant EPOS -->
+      <div id="epos" style="background:linear-gradient(180deg,#051428, #071a2b)" class="section-block">
+        <div class="container py-5">
+          <div class="wrap">
+            <div>
+              <span class="pill">Restaurant | EPOS</span>
+              <h2 class="hero-title fade-in">Complete EPOS — Billing · Kitchen · Staff · Management</h2>
+              <p class="hero-sub fade-in">A modular EPOS system with real-time kitchen routing, staff modules and rich management dashboards to run operations smoothly.</p>
+              
+              <div class="project-mobile-summary d-md-none">
+                <img
+                  src="{{ url_for('static', filename='images/epos-1.jpg') }}"
+                  class="project-mobile-img"
+                  alt="project preview"
+                >
+                <div class="project-more-btn mb-3">
+                  <span class="label-more">More details</span>
+                  <span class="label-less">Less details</span>
+                  <span class="chevron"></span>
+                </div>
+              </div>
 
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row align-items-center">
+              <div class="glass-card fade-in">
+                <div class="responsive-flex">
+                  <div style="flex:1">
+                    <div style="font-weight:800">Key Modules</div>
+                    <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+                      <li>Billing & Payments (contactless & card)</li>
+                      <li>Kitchen Display System (KDS) with routing</li>
+                      <li>Staff scheduling & clock-in/out</li>
+                      <li>Inventory & supplier tracking</li>
+                    </ul>
+                  </div>
+                  <div style="width:240px">
+                    <img src="{{ url_for('static', filename='images/epos-1.jpg') }}" style="width:100%;height:140px;object-fit:cover;border-radius:10px" alt="restaurant" />
+                  </div>
+                </div>
+
+                <div style="margin-top:12px" class="egrid">
+                  <div class="card-small bg-hover">
+                    <div class="mini">Today's Sales</div>
+                    <div class="big-number">£1,824</div>
+                    <div style="margin-top:10px" class="mini">Orders: <strong>84</strong></div>
+                    <div style="margin-top:10px" class="progress"><i style="width:68%"></i></div>
+                  </div>
+                  <div class="card-small bg-hover">
+                    <div class="mini">Active Kitchen Tickets</div>
+                    <div style="font-weight:800;color:#ffd166;font-size:22px">6</div>
+                    <div class="muted" style="margin-top:8px">Avg ticket time: 12m</div>
+                  </div>
+                  <div class="card-small bg-hover" style="grid-column:span 2">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                      <div>
+                        <div class="mini">Staff Clock-In</div>
+                        <div style="font-weight:800;font-size:18px">12 / 16</div>
+                      </div>
+                      <div style="text-align:right">
+                        <div class="mini">Pending Reports</div>
+                        <div style="font-weight:800;color:#ff7b7b">2</div>
+                      </div>
+                    </div>
+                    <div style="margin-top:10px" class="muted">Integrated payroll export · Supplier re-order alerts</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-none d-md-block">
+                <a class="cta" href="#parking" data-target="parking">See Parking Solution</a>
+                <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/tamannas-restaurant">Read More</a>
+              </div>
+            </div>
+
+            <div>
+              <div class="hero-image fade-in d-none d-md-block">
+                <img src="{{ url_for('static', filename='images/epos-2.jpg') }}" alt="EPOS dashboard" />
+              </div>
+
+              <div style="display:flex;gap:12px;margin-top:12px">
+                <div class="glass-card bg-hover" style="flex:1">
+                  <div class="mini">Demo Dashboard</div>
+                  <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+                    <div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(90deg,#ffd166,#ff7b7b);display:flex;align-items:center;justify-content:center;color:#081025;font-weight:900">£</div>
+                    <div>
+                      <div style="font-weight:800">Revenue Trend</div>
+                      <div class="muted" style="font-size:13px">Auto-updates · Export CSV</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="glass-card bg-hover" style="width:220px">
+                  <div class="mini">Integrations</div>
+                  <div style="margin-top:8px" class="muted">Stripe · SumUp · Xero · Slack</div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-md-none">
+                <a class="cta" href="#parking" data-target="parking">See Parking Solution</a>
+                <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/tamannas-restaurant">Read More</a>
+              </div>
+
+            </div>
+          </div>
           
-         
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <h2 class="fw-bold text-primary mb-3" data-animate="fade-in-down">Let's Work Together!</h2>
-            <h5 class="mb-3" data-animate="fade-in-left">
-              Do you have a brilliant idea for a project, but need help bringing it to life?
-            </h5>
-            <p class="text-muted" data-animate="fade-in-left">
-              Look no further – <strong>RENIX (UK) Limited</strong> is here to turn your vision into reality. 
-              Whether you have a fully-formed concept or just a spark of inspiration, 
-              we’re ready to listen, collaborate, and make it happen. Here’s how we can help:
-            </p>
-            <p class="text-muted" data-animate="fade-in-left">
-              Your idea, our expertise, we believe in the power of ideas. 
-              With our team of experienced professionals and cutting-edge technology, 
-              we bring even the wildest ideas to fruition.
-            </p>
 
-           
-            <ul class="list-unstyled mb-4">
-              <li class="mb-2" data-animate="fade-in-left"><i class="bi bi-check2 text-success"></i> Collaborative Approach</li>
-              <li class="mb-2" data-animate="fade-in-left"><i class="bi bi-check2 text-success"></i> Customised Solutions</li>
-              <li class="mb-2" data-animate="fade-in-left"><i class="bi bi-check2 text-success"></i> Transparent Communication</li>
-            </ul>
+        </div>
+      </div>
 
+      <!-- Parking Solutions -->
+      <div id="parking" style="background:linear-gradient(180deg,#081423,#07172b)" class="section-block">
+        <div class="container py-5">
+          <div class="wrap">
+            <div>
+              <span class="pill">End-to-End Parking Solutions</span>
+              <h2 class="hero-title fade-in">Smart Parking · Enforcement · Analytics</h2>
+              <p class="hero-sub fade-in">From bay sensors to payment gateways and enforcement dashboards — integrated parking solutions for operators and cities.</p>
+              
+              <div class="project-mobile-summary d-md-none">
+                <img
+                  src="{{ url_for('static', filename='images/parking-1.jpg') }}"
+                  class="project-mobile-img"
+                  alt="project preview"
+                >
+                <div class="project-more-btn mb-3">
+                  <span class="label-more">More details</span>
+                  <span class="label-less">Less details</span>
+                  <span class="chevron"></span>
+                </div>
+              </div>
+
+              <div class="glass-card fade-in">
+                <div class="responsive-flex">
+                  <div style="flex:1">
+                    <div style="font-weight:800">Modules</div>
+                    <div class="muted" style="font-size:13px">Sensor network · Mobile payments · Occupancy analytics · Operator dashboard · Enforcement tools</div>
+                  </div>
+                  <div style="width:160px">
+                    <img src="{{ url_for('static', filename='images/parking-1.jpg') }}" style="width:100%;height:90px;object-fit:cover;border-radius:8px" alt="parking" />
+                  </div>
+                </div>
+
+                <div style="margin-top:12px" class="parking-grid">
+                  <div class="park-card bg-hover">
+                    <div class="mini">Occupancy</div>
+                    <div style="font-weight:800;font-size:20px">72%</div>
+                    <div class="muted" style="font-size:13px;margin-top:8px">Live bay-level reporting</div>
+                  </div>
+                  <div class="park-card bg-hover">
+                    <div class="mini">Integration</div>
+                    <div style="font-weight:800;font-size:20px">BPA Compliant</div>
+                    <div class="muted" style="font-size:13px;margin-top:8px">Affiliated with British Parking Association</div>
+                  </div>
+                  <div class="park-card bg-hover">
+                    <div class="mini">Payments</div>
+                    <div style="font-weight:800;font-size:20px">Card · App · RFID</div>
+                    <div class="muted" style="font-size:13px;margin-top:8px">Flexible tariffs & receipts</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-none d-md-block">
+                <a class="cta" href="#community" data-target="community">Community Site</a>
+                <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/pay-n-park">Read More</a>
+                
+              </div>
+            </div>
+
+            <div>
+              <div class="hero-image fade-in d-none d-md-block">
+                <img src="{{ url_for('static', filename='images/parking-2.jpg') }}" alt="smart parking" />
+              </div>
+
+              <div style="margin-top:12px" class="glass-card fade-in bg-hover">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div>
+                    <div class="muted">Supported Standards</div>
+                    <div style="font-weight:800">BPA · ISO 27001-ready</div>
+                  </div>
+                  <div style="text-align:right">
+                    <div class="muted">Operators</div>
+                    <div style="font-weight:800">National & Local</div>
+                  </div>
+                </div>
+                <div style="margin-top:10px" class="muted">Reporting · Revenue reconciliation · Enforcement workflow</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-md-none">
+                <a class="cta" href="#community" data-target="community">Community Site</a>
+                <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/pay-n-park">Read More</a>
+                
+              </div>
+          
+
+        </div>
+      </div>
+
+      <!-- Derby Hindu  -->
+      <div id="community" style="background:linear-gradient(180deg,#0a1420, #081220)" class="section-block">
+        <div class="container py-5">
+        <div class="wrap">
+          <div>
+            <span class="pill">Community</span>
+            <h2 class="hero-title fade-in">Derby Hindu Temple UK</h2>
+            <p class="hero-sub fade-in">A warm, accessible site for the Hindu community in Derby — events, membership, donations, and local support resources.</p>
             
-            <a href="/contact" class="btn btn-primary px-4 py-2">
-              Let’s Get Started!!
-            </a>
-          </div>
+            <div class="project-mobile-summary d-md-none">
+              <img
+                src="{{ url_for('static', filename='images/community-img.png') }}"
+                class="project-mobile-img"
+                alt="project preview"
+              >
+              <div class="project-more-btn mb-3">
+                  <span class="label-more">More details</span>
+                  <span class="label-less">Less details</span>
+                  <span class="chevron"></span>
+                </div>
+            </div>
 
-          
-          <div class="col-lg-6 text-center" >
-            <div class="img-container" data-animate="fade-in-right">
-              <img src="{{ url_for('static', filename='images/teamwork.jpg') }}" class="img-fluid rounded customShadow" alt="Teamwork">
+            <div class="glass-card fade-in">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:800">Features</div>
+                  <div class="muted" style="font-size:13px">Event calendar · Volunteer signup · Membership management · 3D Virtual View</div>
+                </div>
+               
+              </div>
+
+              <div style="margin-top:14px" class="events">
+                <div class="event bg-hover">
+                  <div style="font-weight:700">Festive Gathering</div>
+                  <div class="muted" style="font-size:13px">Dec 12 · Derby Community Hall</div>
+                </div>
+                <div class="event bg-hover">
+                  <div style="font-weight:700">Cultural Workshop</div>
+                  <div class="muted" style="font-size:13px">Jan 10 · Volunteers welcome</div>
+                </div>
+                <div class="event bg-hover">
+                  <div style="font-weight:700">Food & Fellowship</div>
+                  <div class="muted" style="font-size:13px">Monthly Meetups</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:12px;margin-top:14px" class="fade-in d-none d-md-block">
+              <a class="cta" href="#rail" data-target="rail">See Rail</a>
+              <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/blog-community">Read More</a>
+              
             </div>
           </div>
 
+          <div>
+            <div class="glass-card fade-in bg-hover" style="padding:16px;">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div class="muted">Members</div>
+                  <div style="font-weight:800;font-size:22px">420</div>
+                </div>
+                <div>
+                  <div class="muted">Upcoming</div>
+                  <div style="font-weight:800;color:#ffd166">3 events</div>
+                </div>
+              </div>
+
+              <div style="margin-top:12px">
+                <div class="muted" style="font-size:13px">Newsletter signup / volunteer forms / secure payment for donations</div>
+              </div>
+            </div>
+
+            <div style="height:14px"></div>
+
+            <div class="hero-image fade-in d-none d-md-block">
+              <img src="{{ url_for('static', filename='images/community-img.png') }}" alt="community" />
+            </div>
+          </div>
+        </div>
+
+          <div style="display:flex;gap:12px;margin-top:14px" class="fade-in  d-md-none">
+              <a class="cta" href="#rail" data-target="rail">See Rail</a>
+              <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/blog-community">Read More</a>
+              
+          </div>
+        
+
+        </div>
+      </div>
+      
+      
+      <!-- rail -->
+      <div class="container py-5">
+        <!--  RENIX Rail -->
+        <div id="rail" class="rail section-block">
+          <div class="wrap">
+            <div>
+              <span class="accent-pill">Sector: Rail</span>
+              <h1 class="hero-title fade-in">RENIX (UK) LIMITED — Rail Systems & Data</h1>
+              <p class="hero-sub fade-in">Specialising in data production and analysis to support interlocking & control systems, timetables and legacy data for TEML-41 and related systems. Trusted by rail operators for robust, auditable data delivery.</p>
+              
+              <div class="project-mobile-summary d-md-none">
+                <img
+                  src="{{ url_for('static', filename='images/rail-1.jpg') }}"
+                  class="project-mobile-img"
+                  alt="project preview"
+                >
+                <div class="project-more-btn mb-3">
+                  <span class="label-more">More details</span>
+                  <span class="label-less">Less details</span>
+                  <span class="chevron"></span>
+                </div>
+
+
+              </div>
+
+              <div class="glass-card bg-hover fade-in" style="margin-top:18px">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div>
+                    <div style="font-weight:800">Capabilities</div>
+                    <div class="muted" style="font-size:13px">Data conversion · Validation · Control interfaces · Timetable modelling</div>
+                  </div>
+                </div>
+
+                <div class="responsive-flex" style="margin-top:12px">
+
+                  <div class="feature-list" style="flex:1">
+                    <div class="feature"><div id="dot" >D</div><div><strong>Data Production</strong><div class="muted" style="font-size:13px">High-integrity extraction & transformation</div></div></div>
+                    <div class="feature"><div id="dot" >V</div><div><strong>Validation</strong><div class="muted" style="font-size:13px">Automated checks & reporting</div></div></div>
+                    <div class="feature"><div id="dot" >I</div><div><strong>Integration</strong><div class="muted" style="font-size:13px">Control systems & APIs</div></div></div>
+                    <div class="feature"><div id="dot" >S</div><div><strong>Support</strong><div class="muted" style="font-size:13px">Operational support & SLA</div></div></div>
+                  </div>
+
+                  <div style="width:260px; height:260px" class="d-none d-md-block">
+                    
+                      <img src="{{ url_for('static', filename='images/rail-1.jpg') }}"  style="width:100%;height:160px;object-fit:cover;border-radius:8px"alt="Rail data" />
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:10px;margin-top:18px" class="fade-in d-none d-md-block">
+                <a class="cta" href="#crm" data-target="crm">Explore CRM</a>
+                <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/rail-network-and-operations" >Read More</a>
+            
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="glass-card bg-hover fade-in">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div>
+                    <div class="muted">Projects Delivered</div>
+                    <div class="big-number">128</div>
+                  </div>
+                  <div style="text-align:right">
+                    <div class="muted">Data Accuracy</div>
+                    <div class="big-number">99.8%</div>
+                  </div>
+                </div>
+                <div style="margin-top:10px">
+                  <div class="muted" style="font-size:13px">Recent delivery: TEML-41 conversion for major operator — 3 week cycle</div>
+                </div>
+              </div>
+
+              <div class="glass-card bg-hover fade-in">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <div style="flex:1">
+                    <div class="muted">Tech stack</div>
+                    <div style="font-weight:800">Python · Flask · MySQL · AWS · GIS</div>
+                  </div>
+                  <div style="width:120px">
+                    <img src="{{ url_for('static', filename='images/rail-2.png') }}" style="width:100%;height:72px;object-fit:cover;border-radius:8px" alt="tech" />
+                  </div>
+                </div>
+              </div>
+              
+
+              <div style="display:flex;gap:10px;margin-top:18px" class="fade-in  d-md-none">
+                <a class="cta" href="#crm" data-target="crm">Explore CRM</a>
+                <a style="background:transparent;text-decoration:none;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);" href="/rail-network-and-operations" >Read More</a>
+            
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+          
+    </section>
+
+    <!--Affiliations & Contact -->
+    <section id="affiliations" style="background:linear-gradient(180deg,#07121a,#06121c)" class="section-block">
+      <div class="container py-5">
+        <div class="wrap">
+          <div>
+            <span class="pill">Affiliations</span>
+            <h2 class="hero-title fade-in">Trusted & Affiliated</h2>
+            <p class="hero-sub fade-in">Proud to be affiliated with leading industry bodies and forums.</p>
+
+            <div class="glass-card fade-in">
+              <div class="logogrid" style="margin-bottom:12px">
+
+                <div class="logo-item bg-hover">
+                    <img src="{{ url_for('static', filename='images/BPA.jpg') }}" alt="British Parking Assoc.">
+                    
+                </div>
+
+                <div class="logo-item bg-hover">
+                    <img src="{{ url_for('static', filename='images/rail-forum.jpg') }}" alt="Rail Forum UK">
+                    
+                </div>
+
+                <div class="logo-item bg-hover">
+                    <img src="{{ url_for('static', filename='images/Authority_Partners_Logo.png') }}" alt="Local Authority">
+                   
+                </div>
+
+                <div class="logo-item bg-hover">
+                    <img src="{{ url_for('static', filename='images/industry-partner.png') }}" alt="Industry Partner">
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-block d-flex justify-content-between align-items-center gap-3 flex-wrap">
+
+              <div class="left flex-grow-1">
+                <div class="lg-fw-bold">
+                  <i class="bi bi-geo-alt-fill me-1 text-primary"></i>
+                  RENIX (UK) LIMITED · Derby / Remote
+                </div>
+              </div>
+
+              <div class="right text-end">
+                
+                <div class="lg-fw-bold">
+                  <i class="bi bi-chat-dots-fill me-1 text-primary"></i>
+                  hello@renix.co.uk · 07854052482
+                </div>
+              </div>
+
+            </div>
+
+            </div>
+            <div style="margin-top:12px" class="glass-card fade-in">
+              <form id="contactForm"  method="POST">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:12px">
+                  <div style="display:flex;flex-direction:column;">
+                    <input type="text" name="username" id="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+                    <div id="nameError" class="text-danger small d-none"></div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;">
+                    <input type="email" name="email" id="email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+                    <div id="emailError" class="text-danger small d-none"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <input type="text" name="phone" id="phone" placeholder="Your phone" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+                  <div id="phoneError" class="text-danger small d-none"></div>
+                </div>
+
+                <div style="margin-top:8px">
+                  <textarea id="message" name="subject" placeholder="Short message" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff" rows="4"></textarea>
+                  <div id="messageError" class="text-danger small d-none"></div>
+                </div>
+                <div class="my-3">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ url_for('captcha_image') }}" 
+                        alt="captcha" 
+                        class="me-3 border rounded"
+                        id="captchaImage"
+                        style="cursor:pointer; width:120px; height:40px;"
+                        onclick="this.src='{{ url_for('captcha_image') }}?'+Math.random();">
+
+                    <input type="text" 
+                          class=" ms-3 w-100 "
+                          style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;" 
+                          name="captcha" 
+                          placeholder="Enter Captcha" 
+                          id="captchaInput">
+                  </div>
+                  <small class=" muted fw-bold d-block" style="font-size:13px">Click image to refresh</small>
+                  <div id="captchaError" class="text-danger small d-none"></div>
+                </div>
+
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                  <div class="muted" style="font-size:13px">We'll respond within 2 business days</div>
+                  <button type="submit" class="cta">Send Message</button>
+                </div>
+              </form>
+            </div>
+
+
+          </div>
+
+          <div>
+            <div class="glass-card fade-in d-none d-md-block" id="quickAbout">
+              <div style="font-weight:800">Contact RENIX</div>
+              <div class="muted" style="font-size:13px;margin-top:8px">
+                Tell us about your requirements and we’ll guide you through the next steps.
+              </div>
+
+              <div style="display:flex;gap:8px;margin-top:10px">
+                <div class="kbd">Python</div>
+                <div class="kbd">AWS</div>
+                <div class="kbd">MySQL</div>
+                <div class="kbd">GIS</div>
+              </div>
+            </div>
+
+            <div style="height:16px"></div>
+
+            <div class="hero-image fade-in d-none d-md-block">
+              <img src="{{ url_for('static', filename='images/office-img.jpg') }}" alt="office" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
-     {% include 'footer.html' %}
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          const cards = document.querySelectorAll("#blogGrid .col-md-6");
-          const cardsPerPage = 4;
-          const totalCards = cards.length;
-          const totalPages = Math.ceil(totalCards / cardsPerPage);
-          const pagination = document.getElementById("pagination");
+  
 
-          let currentPage = 1;
+</main>
 
-          function showPage(page) {
-            currentPage = page;
+</div>
 
-            // Hide all cards
-            cards.forEach(card => card.style.display = "none");
-
-            // Show only current page cards
-            const start = (page - 1) * cardsPerPage;
-            const end = start + cardsPerPage;
-            cards.forEach((card, index) => {
-              if (index >= start && index < end) {
-                card.style.display = "block";
-              }
-            });
-
-            renderPagination();
-        }
-
-        function renderPagination() {
-          pagination.innerHTML = "";
-
-          // Previous Button
-          const prev = document.createElement("li");
-          prev.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
-          prev.innerHTML = `<a class="page-link btn btn-darkblue text-white px-4 mx-1" href="#">Previous</a>`;
-          prev.addEventListener("click", e => {
-            e.preventDefault();
-            if (currentPage > 1) showPage(currentPage - 1);
-          });
-          pagination.appendChild(prev);
-
-          // Page Numbers
-          for (let i = 1; i <= totalPages; i++) {
-            const li = document.createElement("li");
-            li.className = "page-item";
-            li.innerHTML = `<a class="page-link btn  ${i === currentPage ? "btn-info text-white" : "btn-darkblue text-white"} px-4 mx-1" href="#">${i}</a>`;
-            li.addEventListener("click", e => {
-              e.preventDefault();
-              showPage(i);
-            });
-            pagination.appendChild(li);
-          }
-
-          // Next Button
-          const next = document.createElement("li");
-          next.className = `page-item ${currentPage === totalPages ? "disabled" : ""}`;
-          next.innerHTML = `<a class="page-link btn btn-darkblue text-white px-4 mx-1" href="#">Next</a>`;
-          next.addEventListener("click", e => {
-            e.preventDefault();
-            if (currentPage < totalPages) showPage(currentPage + 1);
-          });
-          pagination.appendChild(next);
-        }
-
-
-          // Initialize
-          showPage(1);
-        });
-    </script>
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- Flash Message Modal -->
+  <div class="modal fade" id="flashMessageModal" tabindex="-1" aria-labelledby="flashMessageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"> 
+      <div class="modal-content shadow-lg rounded-4 border-0">
+        <div id="flashModalHeader" class="modal-header text-white rounded-top-4" style="background-color: #0A1432;"> 
+          <h5 class="modal-title fw-bold" id="flashMessageModalLabel">Notification</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center"> 
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} fw-semibold" role="alert">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-primary px-4 py-2 text-decoration-none rounded-pill" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
   </body>
+  {% include 'footer.html' %}
+  <script src="{{ url_for('static', filename='bootstrap/bootstrap.bundle.min.js') }}"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let flashModal = new bootstrap.Modal(document.getElementById("flashMessageModal"));
+  
+        // Check if there are any flash messages inside the modal
+        if (document.querySelector("#flashMessageModal .alert")) {
+            flashModal.show(); 
+        }
+    });
+
+  // Simple SPA-style nav + in-view animations
+  const navLinks = document.querySelectorAll('nav a');
+  const dots = document.querySelectorAll('.pager .dot');
+  const sections = Array.from(document.querySelectorAll('main section, main .section-block'));
+  const mainEl = document.getElementById('main');
+
+ 
+
+  // scroll to section
+  document.querySelectorAll('[data-target]').forEach(el=>{
+    el.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = el.dataset.target;
+      const sec = document.getElementById(id);
+      if(sec) sec.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // pager dots click
+  dots.forEach(d => d.addEventListener('click', ()=>{ document.getElementById(d.dataset.target).scrollIntoView({behavior:'smooth'}) }));
+
+ 
+  // Map child project sections to one nav item
+  const sectionToNav = {
+    home: 'home',
+    about: 'about',
+    services: 'services',
+
+    // All of these belong to the "projects" nav button:
+    projects: 'projects',
+    crm : 'projects',
+    rail: 'projects',
+    epos: 'projects',
+    community: 'projects',
+    parking: 'projects',
+    affiliations: 'affiliations'
+  };
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const id = entry.target.id;
+
+        // If the section is a child of "projects", use 'projects'
+        const navTarget = sectionToNav[id] ?? id;
+
+        setActive(navTarget);
+
+        // animate fade-in
+        entry.target.querySelectorAll('.fade-in').forEach((el, idx)=>{
+          setTimeout(()=> el.classList.add('in'), idx*80);
+        });
+        entry.target.querySelectorAll('.stagger').forEach(st=>{
+          st.classList.add('in');
+        });
+      }
+    });
+  }, {threshold:0.45});
+
+
+  sections.forEach(s => io.observe(s));
+
+  // keyboard up/down navigation
+  window.addEventListener('keydown', (e)=>{
+    if(['ArrowDown','ArrowUp','PageDown','PageUp'].includes(e.key)){
+      e.preventDefault();
+      const visibleIndex = sections.findIndex(s=>{
+        const rect = s.getBoundingClientRect();
+        return rect.top >= -50 && rect.top < window.innerHeight/2;
+      });
+      if(e.key === 'ArrowDown' || e.key === 'PageDown'){
+        const next = sections[Math.min(sections.length-1, Math.max(0, visibleIndex+1))];
+        next && next.scrollIntoView({behavior:'smooth'});
+      } else {
+        const prev = sections[Math.max(0, visibleIndex-1)];
+        prev && prev.scrollIntoView({behavior:'smooth'});
+      }
+    }
+  });
+
+  // Fake send (demo)
+  const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(event) {
+    let isValid = true;
+
+    // Name Validation
+    const name = document.getElementById('name');
+    const nameError = document.getElementById('nameError');
+    const nameValue = name.value.trim();
+    if (nameValue === '') {
+      nameError.textContent = "Name is required.";
+      nameError.classList.remove('d-none');
+      name.classList.add('is-invalid');
+      isValid = false;
+    } else if (nameValue.length < 3 || nameValue.length > 15) {
+      nameError.textContent = "Name must be 3-15 characters.";
+      nameError.classList.remove('d-none');
+      name.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      nameError.classList.add('d-none');
+      name.classList.remove('is-invalid');
+    }
+
+    // Email Validation
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const emailValue = email.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailValue === '') {
+      emailError.textContent = "Email is required.";
+      emailError.classList.remove('d-none');
+      email.classList.add('is-invalid');
+      isValid = false;
+    } else if (!emailPattern.test(emailValue)) {
+      emailError.textContent = "Please enter a valid email address.";
+      emailError.classList.remove('d-none');
+      email.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      emailError.classList.add('d-none');
+      email.classList.remove('is-invalid');
+    }
+
+    // Phone Validation
+    const phone = document.getElementById('phone');
+    const phoneError = document.getElementById('phoneError');
+    const phoneValue = phone.value.trim();
+    if (phoneValue === '') {
+      phoneError.textContent = "Phone number is required.";
+      phoneError.classList.remove('d-none');
+      phone.classList.add('is-invalid');
+      isValid = false;
+    } else if (!/^\+?\d{7,15}$/.test(phoneValue)) {
+      phoneError.textContent = "Please enter a valid phone number.";
+      phoneError.classList.remove('d-none');
+      phone.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      phoneError.classList.add('d-none');
+      phone.classList.remove('is-invalid');
+    }
+
+    // Message Validation
+    const message = document.getElementById('message');
+    const messageError = document.getElementById('messageError');
+    const messageValue = message.value.trim();
+    if (messageValue === '') {
+      messageError.textContent = "Message is required.";
+      messageError.classList.remove('d-none');
+      message.classList.add('is-invalid');
+      isValid = false;
+    } else if (messageValue.length < 5) {
+      messageError.textContent = "Message must be at least 5 characters.";
+      messageError.classList.remove('d-none');
+      message.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      messageError.classList.add('d-none');
+      message.classList.remove('is-invalid');
+    }
+
+    // Captcha Validation (empty check)
+    const captchaInput = document.getElementById('captchaInput');
+    const captchaError = document.getElementById('captchaError');
+    const captchaValue = captchaInput.value.trim();
+    if (captchaValue === '') {
+      captchaError.textContent = "Captcha is required.";
+      captchaError.classList.remove('d-none');
+      captchaInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      captchaError.classList.add('d-none');
+      captchaInput.classList.remove('is-invalid');
+    }
+
+    if (isValid) {
+    event.preventDefault(); 
+    fakeSend(event);
+    } else {
+        event.preventDefault(); 
+    }
+
+  });
+}
+
+
+
+
+function fakeSend(event) {
+  const btn = event.submitter;
+  btn.disabled = true;
+  btn.innerText = 'Sending...';
+  setTimeout(() => {
+    btn.innerText = 'Sent ✓';
+    btn.style.background = 'linear-gradient(90deg,#8de08d,#38d38a)';
+    btn.disabled = false;
+    setTimeout(() => { 
+      btn.innerText = 'Send Message'; 
+      btn.style.background = ''; 
+      event.target.submit();
+    }, 2200);
+  }, 900);
+}
+
+
+  // Initial animate for first section
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const first = document.querySelector('section');
+    first && first.querySelectorAll('.fade-in').forEach((el, idx)=> setTimeout(()=> el.classList.add('in'), idx*80));
+  });
+
+  const mobileLinks = document.querySelectorAll('.offcanvas-menu a');
+
+function setActive(targetId){
+  // Desktop
+  navLinks.forEach(a => a.classList.toggle('active', a.dataset.target === targetId));
+  // Mobile
+  mobileLinks.forEach(a => a.classList.toggle('active', a.dataset.target === targetId));
+  // Pager dots
+  dots.forEach(d => d.classList.toggle('active', d.dataset.target === targetId));
+}
+
+
+
+const navbarToggle = document.getElementById('navbarToggle');
+const offcanvasNav = document.getElementById('offcanvasNav');
+const backdrop = document.querySelector('.offcanvas-backdrop');
+
+navbarToggle.addEventListener('click',()=>{
+  offcanvasNav.classList.toggle('open');
+  backdrop.classList.toggle('show');
+  navbarToggle.classList.toggle('open');
+});
+backdrop.addEventListener('click',()=>{
+  offcanvasNav.classList.remove('open');
+  backdrop.classList.remove('show');
+  navbarToggle.classList.remove('open');
+});
+
+// Close mobile nav when clicking a menu link + set active
+mobileLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // close menu
+    offcanvasNav.classList.remove("open");
+    backdrop.classList.remove("show");
+    navbarToggle.classList.remove("open");
+
+    // highlight active menu
+    const id = link.dataset.target;
+    if(id) setActive(id);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const cards = document.querySelectorAll(".service-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      if (window.innerWidth > 780) return; 
+      card.classList.toggle("open");
+    });
+  });
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  if (window.innerWidth > 768) return;
+
+  document.querySelectorAll("#projects .section-block").forEach(section => {
+
+    const img = section.querySelector(".project-mobile-img");
+    const btn = section.querySelector(".project-more-btn");
+
+    function toggle() {
+      section.classList.toggle("mobile-open");
+    }
+
+    img?.addEventListener("click", toggle);
+    btn?.addEventListener("click", toggle);
+  });
+
+});
+
+
+
+
+</script>
 </html>

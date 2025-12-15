@@ -11,89 +11,125 @@
   <!-- Header -->
   {% include 'navbar.html' %}
 
-  <div class="container my-5">
-    <h1 class="mb-4 border-bottom pb-2 text-primary" data-animate="fade-in-down">FlyerPro – Smart Leaflet Distribution</h1>
+  <!-- FlyerPro -->
+<div id="flyerpro" style="background:linear-gradient(180deg,#051428, #071a2b)" class="section-block">
+  <div class="container py-5">
+    <div class="wrap">
+
+      <div>
+        <span class="pill" data-animate="fade-in-down">Marketing Tech</span>
+        <h2 class="hero-title ">FlyerPro – Smart Leaflet Distribution</h2>
+
+        <p class="hero-sub" data-animate="fade-in-left">
+          FlyerPro is a location-intelligent leaflet distribution platform developed by RENIX (UK) Limited.
+          It centralises flyer handling, live delivery tracking, and campaign analytics in one intuitive
+          dashboard—ideal for businesses seeking accuracy, transparency, and performance-driven marketing.
+        </p>
+
+        <div class="glass-card" data-animate="fade-in-up">
+
+          <div class="responsive-flex">
+            <div style="flex:1" >
+              <div style="font-weight:800">What is FlyerPro?</div>
+              <p class="muted" style="margin-top:6px;font-size:13px">
+                FlyerPro is a smart, GPS-enabled leaflet distribution system designed to help teams plan,
+                deliver, and monitor campaigns with complete clarity. From assigning postcodes to logging
+                each delivery, all activity is recorded in real time for precise management and reporting.
+              </p>
+
+              <ul style="margin:10px 0 0;padding-left:18px;color:var(--muted)">
+                <li>End-to-end workflow: Design, Print, Deliver</li>
+                <li>Live GPS tracking with route history and checkpoints</li>
+                <li>Smart delivery logging to prevent duplicates or missed addresses</li>
+                <li>Team scheduling and performance monitoring built in</li>
+              </ul>
+            </div>
 
     
+          </div>
 
-    <!-- Overview -->
-    <p class="fw-bold mb-4" data-animate="fade-in-up">
-      FlyerPro is a smart, location-based leaflet distribution platform developed by RENIX (UK) Limited. Designed for modern marketing needs, it simplifies flyer handling, GPS-tracked deliveries, and real-time campaign monitoring  all through a single, intuitive dashboard.
-    </p>
+          <div style="margin-top:12px" class="egrid">
+            <div class="card-small bg-hover">
+              <div class="mini">Live Deliveries</div>
+              <div class="big-number">42</div>
+              <div class="mini" style="margin-top:10px">Tracked via GPS · Updated in real-time</div>
+              <div style="margin-top:10px" class="progress"><i style="width:74%"></i></div>
+            </div>
 
-    <h3 class="mb-3" data-animate="fade-in-left">What is FlyerPro?</h3>
-    <p data-animate="fade-in-left">
-      FlyerPro empowers businesses, marketers, and distribution teams to streamline the entire flyer delivery process. From design to doorstep, the platform offers visibility, automation, and control over every step of the campaign, backed by real-time tracking and analytics.
-    </p>
+            <div class="card-small bg-hover">
+              <div class="mini">Active Teams</div>
+              <div style="font-weight:800;color:#ffd166;font-size:22px">9</div>
+              <div class="muted" style="margin-top:8px">Coverage across 18 postcodes</div>
+            </div>
 
-    <p class="mb-4" data-animate="fade-in">
-      <strong>Official Website:</strong> 
-      <a href="https://flyerpro.co.uk/" target="_blank">
-        https://flyerpro.co.uk/
-      </a>
-    </p>
+            <div class="card-small bg-hover" style="grid-column:span 2">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div class="mini">Completed Deliveries</div>
+                  <div style="font-weight:800;font-size:18px">12,480+</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="mini">Campaigns</div>
+                  <div style="font-weight:800;color:#ff7b7b">87</div>
+                </div>
+              </div>
+              <div style="margin-top:10px" class="muted">
+                Real-time coverage maps · Secure historical delivery logs
+              </div>
+            </div>
+          </div>
 
-    <!-- Features -->
-    <h3 class="mb-3" data-animate="fade-in-left">Key Features</h3>
-    <ul class="list-group mb-4">
-      <li class="list-group-item" data-animate="fade-in-left">
-        <strong> Real-Time GPS Tracking:</strong>
-        <p class="mb-0">Track flyer deliveries live on a map using Leaflet.js and WebSocket technology. Monitor team movement, coverage history, and check-ins as they happen.</p>
-      </li>
-      <li class="list-group-item" data-animate="fade-in-left">
-        <strong> Team and Task Management:</strong>
-        <p class="mb-0">Assign postcodes and delivery areas, monitor team performance, and organise schedules from a user-friendly admin panel.</p>
-      </li>
-      <li class="list-group-item" data-animate="fade-in-left">
-        <strong> Smart Flyer Handling:</strong>
-        <p class="mb-0">Prevent duplicates and missed deliveries using automated route logging, delivery status checks, and historical data.</p>
-      </li>
-      <li class="list-group-item" data-animate="fade-in-left">
-        <strong> End-to-End Service:</strong>
-        <p class="mb-0">From flyer design and print to delivery and tracking  FlyerPro handles every stage with reliability and style.</p>
-      </li>
-    </ul>
+        </div>
 
-    <!-- Tech Stack -->
-    <h3 class="mb-3" data-animate="fade-in-left">Technology Stack Behind FlyerPro</h3>
-    <p data-animate="fade-in-left">FlyerPro is built using modern, scalable tools to ensure a smooth and secure experience:</p>
-    <ul class="list-group mb-4">
-      <li class="list-group-item" data-animate="fade-in-left">Flask (Python) backend for handling tasks and API logic</li>
-      <li class="list-group-item" data-animate="fade-in-left">SQL database to manage users, tasks, addresses, and tracking history</li>
-      <li class="list-group-item" data-animate="fade-in-left">Leaflet.js for real-time map-based GPS tracking</li>
-      <li class="list-group-item" data-animate="fade-in-left">JavaScript + Bootstrap frontend for responsive UI</li>
-      <li class="list-group-item" data-animate="fade-in-left">AWS hosting and storage for scalability and security</li>
-    </ul>
+        <p class="muted" style="margin-top:14px">
+          Built for marketing agencies, field teams, and distributors, FlyerPro delivers unmatched visibility
+          and accountability. Every route, delivery checkpoint, and status update is securely stored and
+          accessible whenever needed.
+        </p>
 
-    <!-- Why FlyerPro -->
-    <h3 class="mb-3" data-animate="fade-in-left">Why FlyerPro Stands Out</h3>
-    <ul class="list-group mb-4">
-      <li class="list-group-item" data-animate="fade-in-left"><strong>Transparency:</strong> Live tracking ensures you always know where your flyers are going.</li>
-      <li class="list-group-item" data-animate="fade-in-left"><strong>Simplicity:</strong> Clean interface and minimal training required for teams to get started.</li>
-      <li class="list-group-item" data-animate="fade-in-left"><strong>Control:</strong> Admins can monitor, assign, and analyse campaigns from one place.</li>
-    </ul>
+        <p class="muted" style="margin-top:10px">
+          With analytical insights, territory coverage history, and expanding mobile capabilities,
+          FlyerPro ensures every campaign achieves measurable results.
+        </p>
 
-    <!-- Future Enhancements -->
-    <h3 class="mb-3" data-animate="fade-in-left">What’s Next for FlyerPro?</h3>
-    <p data-animate="fade-in-left">We're actively working on new features to enhance the FlyerPro experience, including:</p>
-    <ul class="list-group mb-4">
-      <li class="list-group-item" data-animate="fade-in-left"><strong> Mobile App:</strong> Full support for iOS/Android with live navigation and check-in.</li>
-      <li class="list-group-item" data-animate="fade-in-left"><strong> Campaign Analytics:</strong> Insights on flyer engagement, area performance, and team efficiency.</li>
-      <li class="list-group-item" data-animate="fade-in-left"><strong> Multilingual Dashboard:</strong> Expanding to support regional languages across the UK.</li>
-    </ul>
+        <!-- Centered button -->
+        <div class="d-flex justify-content-center mt-4">
+          <a href="https://flyerpro.co.uk/" class="btn btn-primary px-4 py-2 rounded-pill" target="_blank">
+            Visit FlyerPro Website
+          </a>
+        </div>
 
-    <!-- Conclusion -->
-    <h3 class="mb-3" data-animate="fade-in-left">Partner with RENIX (UK) Limited</h3>
-    <p data-animate="fade-in-left">
-      FlyerPro is revolutionising how businesses reach customers through physical marketing. Whether you’re a local business or a national brand, FlyerPro ensures smarter distribution with measurable impact.
-    </p>
-    <p data-animate="fade-in-left"><strong>Contact us today</strong> to start your next flyer campaign with confidence!</p>
+      </div>
 
-    <p class="text-muted">Written by RENIX (UK) Limited Team</p>
+      <!-- Right Side Graphic -->
+      <div data-animate="fade-in-up">
+        <div class="hero-image">
+          <img src="{{ url_for('static', filename='images/flyerpro-2.jpg') }}" alt="FlyerPro dashboard" />
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <div class="glass-card bg-hover" style="flex:1">
+            <div class="mini">Technology Stack</div>
+            <div style="margin-top:8px" class="muted">
+              Flask · SQL · Leaflet.js · WebSocket · AWS Cloud Infrastructure
+            </div>
+          </div>
+
+          <div class="glass-card bg-hover" style="width:220px">
+            <div class="mini">Service Type</div>
+            <div style="margin-top:8px" class="muted">
+              End-to-End Service | Print · Deliver · Track
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+</div>
 
-  <!-- Footer -->
   {% include 'footer.html' %}
+
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
