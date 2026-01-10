@@ -8,9 +8,11 @@ from dotenv import load_dotenv
 
 app = Flask(__name__)
 
+load_dotenv()
+
 app.secret_key = os.getenv('SECRET_KEY')
 
-load_dotenv()
+
 
 
 app.config['MAIL_SERVER'] = 'smtppro.zoho.eu'
@@ -32,6 +34,11 @@ def home():
         phone = request.form.get('phone')
         msg = request.form.get('subject')
         user_answer = request.form.get('captcha')
+        
+        if not username or not email or not msg:
+            flash("Please fill in all required fields.", "danger")
+            return redirect(url_for('home'))
+        
         # Validate captcha
         correct_answer = session.get('captcha_answer')
         if not correct_answer or str(user_answer) != str(correct_answer):
@@ -54,9 +61,21 @@ def home():
             email=email,
             message=msg
         )
+        
+        # ----------to User ----------
+        auto_reply = Message(
+            subject="Thank you for contacting RENIX (UK)",
+            recipients=[email]
+        )
+
+        auto_reply.html = render_template(
+            "auto_reply.html",
+            name=username
+        )
 
         try:
             mail.send(message)
+            mail.send(auto_reply)
             flash("Thank you for your message! We will contact you soon.", "success")
         except Exception as e:
             print("Email sending error:", e)

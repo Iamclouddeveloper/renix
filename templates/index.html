@@ -128,13 +128,13 @@
 
         <div class="testi-grid d-none d-md-block">
           <div class="testi-box">
-            <strong>“Professional, fast and extremely effective for our CRM MVP.”</strong><br>
-            <span style="color:var(--muted);font-size:14px">— Roofing Business, UK</span>
+            <strong>“High-quality EPOS system implementation and clear guidance from start to finish. Our team adapted quickly and our customers notice the difference.”</strong><br>
+            <span style="color:var(--muted);font-size:14px">— Restaurant Manager, UK</span>
           </div>
 
           <div class="testi-box">
-            <strong>“High-quality engineering and clear communication from start to finish.”</strong><br>
-            <span style="color:var(--muted);font-size:14px">— eCommerce Director</span>
+            <strong>“Professional, reliable, and highly effective — our CRM-powered flyer campaigns reach the right audience with ease.”</strong><br>
+            <span style="color:var(--muted);font-size:14px">— Marketing Manager, UK</span>
           </div>
         </div>
 
@@ -792,7 +792,7 @@
 
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
                   <div class="muted" style="font-size:13px">We'll respond within 2 business days</div>
-                  <button type="submit" class="cta">Send Message</button>
+                  <button type="submit" class="cta"  id="sendBtn">Send Message</button>
                 </div>
               </form>
             </div>
@@ -954,6 +954,7 @@
 
   // Fake send (demo)
   const contactForm = document.getElementById('contactForm');
+  const sendBtn = document.getElementById('sendBtn');
 
 if (contactForm) {
   contactForm.addEventListener('submit', function(event) {
@@ -1050,34 +1051,35 @@ if (contactForm) {
       captchaInput.classList.remove('is-invalid');
     }
 
-    if (isValid) {
-    event.preventDefault(); 
-    fakeSend(event);
-    } else {
-        event.preventDefault(); 
+    if (!isValid) {
+      event.preventDefault();
+      return;
     }
+    if (sendBtn.dataset.sent === "true") {
+      event.preventDefault();
+      return;
+    }
+
+    sendBtn.dataset.sent = "true";
+    sendBtn.disabled = true;
+    sendBtn.innerText = "Sending...";
+    sendBtn.style.opacity = "0.8";
+
 
   });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const successAlert = document.querySelector(".alert-success");
 
+  if (successAlert && sendBtn) {
+    sendBtn.innerText = "Sent ✓";
+    sendBtn.disabled = true;
+    sendBtn.style.background = "linear-gradient(90deg,#8de08d,#38d38a)";
+    sendBtn.style.opacity = "1";
+  }
+});
 
-
-function fakeSend(event) {
-  const btn = event.submitter;
-  btn.disabled = true;
-  btn.innerText = 'Sending...';
-  setTimeout(() => {
-    btn.innerText = 'Sent ✓';
-    btn.style.background = 'linear-gradient(90deg,#8de08d,#38d38a)';
-    btn.disabled = false;
-    setTimeout(() => { 
-      btn.innerText = 'Send Message'; 
-      btn.style.background = ''; 
-      event.target.submit();
-    }, 2200);
-  }, 900);
-}
 
 
   // Initial animate for first section
